@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RogueVerse Studio: Mythra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .mythra-hero{min-height:620px;padding:70px 6vw;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 30%,rgba(7,87,216,.3),transparent 35%),#070b14}
+    .mythra-hero img{width:min(560px,90vw);filter:drop-shadow(0 25px 50px #000)}
+    .mythra-hero p{max-width:760px;color:#ccd3df;line-height:1.7}
+    .series-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:80px 6vw;background:#0d1424}
+    .series-card{min-height:470px;padding:30px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;background:linear-gradient(145deg,#14254a,#10131b);border:1px solid rgba(255,255,255,.13);position:relative;overflow:hidden}
+    .series-card:before{content:"";position:absolute;width:150px;height:650px;background:var(--orange);top:-80px;right:12%;transform:rotate(24deg);opacity:.8}
+    .series-card>*{position:relative}.series-card h2{font-size:clamp(38px,4vw,62px)}.series-card p{line-height:1.6}
+    @media(max-width:900px){.series-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="../"><span class="brand-mark">RV</span><span><b>ROGUEVERSE</b><small>MYTHRA</small></span></a><a class="button button-primary" href="../">Studio Home</a></header>
+<main>
+  <section class="mythra-hero">
+    <div>
+      <img src="../assets/rogueverse-mythra-emblem.png" alt="RogueVerse Studio Mythra emblem">
+      <p>Stories. Worlds. Legends. Choose a series and enter a growing library of original manga and comics, designed to be read directly on the site.</p>
+    </div>
+  </section>
+  <section class="series-grid">
+    <a id="sentou" class="series-card" href="reader.html?series=sentou&issue=1"><p class="eyebrow">Fantasy / Action</p><h2>SENTOU</h2><p>Enter Queen City and the world of the Senshi.</p><span class="button button-light">Read Issue 1</span></a>
+    <a id="love-power" class="series-card" href="reader.html?series=love-power&issue=1"><p class="eyebrow">Mystery / Light Action</p><h2>LOVE × POWER</h2><p>Ashley and Steven become the center of a mystery their fans may understand first.</p><span class="button button-light">Read Issue 1</span></a>
+    <a id="bounty-world" class="series-card" href="reader.html?series=bounty-world&issue=1"><p class="eyebrow">Sci-Fi / Action</p><h2>STRANDED IN A BOUNTY HUNTER WORLD</h2><p>Survival gets complicated when everyone is chasing a payday.</p><span class="button button-light">Read Issue 1</span></a>
+  </section>
+</main>
+<footer><a class="brand" href="../"><span class="brand-mark">RV</span><span><b>ROGUEVERSE</b><small>STUDIO</small></span></a><p>© <span data-year></span> RogueVerse Studio</p></footer>
+<script src="../script.js"></script>
+</body>
+</html>
