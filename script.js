@@ -1,4 +1,4 @@
-const SHOP_URL = "#"; // Replace # with the full URL of your Square store.
+const SHOP_URL = "#"; // Replace with the full Square store URL.
 
 document.querySelectorAll("[data-shop-link]").forEach((link) => {
   link.href = SHOP_URL;
@@ -24,10 +24,19 @@ if (toggle && nav) {
     const open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(open));
   });
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
+  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  }));
 }
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
