@@ -118,3 +118,28 @@ footer{padding:45px clamp(22px,6vw,92px);display:flex;align-items:center;justify
 
 /* RogueVerse Studio 3.0 Final */
 .brand-image img{width:42px;height:42px;object-fit:contain}.hero-final{position:relative;min-height:70vh;background:#000;display:grid;place-items:center;overflow:hidden}.hero-final>img{width:100%;height:100%;object-fit:cover;min-height:70vh}.hero-final-overlay{position:absolute;inset:auto 0 6%;display:grid;justify-items:center;gap:18px;text-align:center}.destination-section{background:#070b14}.destination-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.destination-card{display:flex;flex-direction:column;text-decoration:none;background:#0d1424;border:1px solid rgba(255,255,255,.14);overflow:hidden;transition:.25s}.destination-card:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(0,0,0,.4);border-color:var(--orange)}.destination-card img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#000}.destination-card span{padding:18px 20px;color:#d8dde7}.story-visual{background:linear-gradient(90deg,rgba(223,227,232,.94),rgba(223,227,232,.76)),url('assets/backgrounds/our-story.png') center/cover}.division-hero{min-height:620px;background-position:center;background-size:cover;display:grid;align-items:end;padding:clamp(45px,7vw,90px)}.division-hero h1{font-size:clamp(54px,8vw,120px);text-shadow:0 8px 35px #000}.lead-copy{max-width:850px;font-size:20px;line-height:1.8}.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:35px 0}.category-grid a{display:flex;flex-direction:column;gap:8px;padding:24px;background:#0d1424;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.14)}.category-grid b{font:28px var(--display)}.nav-social{color:var(--orange)!important}.error-page{min-height:100vh;background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.65)),url('assets/backgrounds/404-city.png') center/cover fixed;color:#fff}.error-page main{min-height:100vh;display:grid;align-items:center;padding:8vw}.error-page h1{font-size:clamp(54px,8vw,110px)}.error-page p{font-size:20px}@media(max-width:900px){.destination-grid{grid-template-columns:1fr}.division-hero{min-height:480px}.hero-final>img,.hero-final{min-height:60vh}}
+.founder-message {
+  margin-top: 55px;
+  padding: clamp(28px, 4vw, 48px);
+  background: #0a1120;
+  color: #f8f3e8;
+  border-left: 6px solid var(--orange);
+  border-radius: 0 14px 14px 0;
+}
+
+.founder-message h2 {
+  margin-bottom: 24px;
+  font-size: clamp(32px, 5vw, 60px);
+}
+
+.founder-message p {
+  max-width: 760px;
+  line-height: 1.75;
+}
+
+.founder-signature {
+  margin-top: 28px;
+  color: var(--orange);
+  font-family: var(--display);
+  letter-spacing: 0.04em;
+}
