@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mythra Reader | RogueVerse Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="reader-body">
+<header class="reader-header">
+  <a href="./">← Library</a>
+  <strong id="reader-title">ROGUEVERSE STUDIO: MYTHRA — ISSUE 1</strong>
+  <div class="reader-controls"><button id="zoom-out" aria-label="Make pages smaller">−</button><button id="zoom-in" aria-label="Make pages larger">+</button></div>
+</header>
+<main id="reader" class="reader" aria-label="Manga pages">
+  <article class="manga-page" data-page="01"><span class="page-number">01</span></article>
+  <article class="manga-page" data-page="02"><span class="page-number">02</span></article>
+  <article class="manga-page" data-page="03"><span class="page-number">03</span></article>
+</main>
+<script>
+const names={sentou:"SENTOU","love-power":"LOVE × POWER","bounty-world":"STRANDED IN A BOUNTY HUNTER WORLD"};
+const params=new URLSearchParams(location.search);
+const series=params.get("series")||"sentou";
+const issue=params.get("issue")||"1";
+document.querySelector("#reader-title").textContent=`${names[series]||"ROGUEVERSE STUDIO: MYTHRA"} — ISSUE ${issue}`;
+let width=1050;
+const reader=document.querySelector("#reader");
+document.querySelector("#zoom-in").onclick=()=>{width=Math.min(1500,width+100);reader.style.maxWidth=`${width}px`;};
+document.querySelector("#zoom-out").onclick=()=>{width=Math.max(500,width-100);reader.style.maxWidth=`${width}px`;};
+</script>
+</body>
+</html>
