@@ -43,6 +43,7 @@ document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
 
 const storyFeeds = {
   "/old-man-otaku/": [
+    ["horikoshi-horror-one-shot/", "MANGA NEWS", "Horikoshi Is Coming Back—and He Brought Horror With Him"],
     ["gundam-xarx-zero/", "ANIME NEWS", "A New Gundam Universe Begins With XARX-ZERO"],
     ["../news/movies/avatar-aang/", "MOVIES / ANIMANGA", "Avatar Aang Is Back—and All Grown Up"],
     ["luke-cage-doctor-doom/", "COMIC HISTORY", "Luke Cage Went to Latveria for His Money"],
