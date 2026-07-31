@@ -22,7 +22,7 @@
 .rv-hero{position:relative;min-height:clamp(520px,62vw,840px);isolation:isolate;display:flex;align-items:flex-end;overflow:hidden;background:#020408;border-bottom:1px solid #252b34}
 .rv-hero__art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
 .rv-hero__shade{position:absolute;inset:0;background:
-  linear-gradient(90deg,rgba(1,3,7,.88),rgba(1,3,7,.28) 42%,rgba(1,3,7,.08) 68%,rgba(1,3,7,.5)),
+  linear-gradient(90deg,rgba(1,3,7,.92),rgba(1,3,7,.5) 34%,rgba(1,3,7,.08) 58%,rgba(1,3,7,.35)),
   linear-gradient(0deg,rgba(1,3,7,.98),transparent 42%);
 }
 .rv-hero__copy{position:relative;z-index:2;width:min(610px,78vw);margin:0 0 clamp(75px,9vw,120px) clamp(24px,6.5vw,105px)}
@@ -168,8 +168,8 @@
 }
 @media(max-width:680px){
   .rv-hero{min-height:600px;align-items:flex-end}
-  .rv-hero__art{object-fit:cover;object-position:center}
-  .rv-hero__shade{background:linear-gradient(0deg,rgba(1,3,7,.98),rgba(1,3,7,.18) 70%)}
+  .rv-hero__art{object-fit:cover;object-position:50% center}
+  .rv-hero__shade{background:linear-gradient(0deg,rgba(1,3,7,.98),rgba(1,3,7,.42) 44%,rgba(1,3,7,.08) 78%)}
   .rv-hero__copy{width:auto;margin:0 20px 54px}
   .rv-hero__intro{max-width:430px}
   .section-title--row{align-items:flex-start;flex-direction:column}
