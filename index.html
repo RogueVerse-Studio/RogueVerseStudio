@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="RogueVerse Studio: original manga, entertainment culture, anime and manga coverage, future technology, community, and merchandise.">
+  <meta name="description" content="RogueVerse Studio: original manga, anime and manga coverage, movies, games, future technology, community, and merchandise.">
   <title>RogueVerse Studio | Stories. Worlds. Legacies.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,107 +14,255 @@
   <link rel="icon" href="assets/brand/studio/rogueverse-sword-mark.png">
 </head>
 <body class="rv-home">
-<header class="site-header rv-header">
-  <a class="brand brand-image" href="#top"><img src="assets/brand/studio/rogueverse-sword-mark.png" alt=""><span><b>ROGUEVERSE</b><small>STUDIO</small></span></a>
-  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">MENU</button>
-  <nav id="site-nav" class="site-nav">
-    <a class="active" href="#top">Home</a><a href="mythra/">Mythra</a><a href="our-culture/">Our Culture</a><a href="old-man-otaku/">AniManga Updates</a><a href="future/">Future</a><a href="creators/">Create</a><a href="community/">Community</a><a href="shop/">Shop</a><a href="our-story/">About</a>
-  </nav>
-</header>
-<main id="top">
-  <section class="studio-hero" aria-label="RogueVerse Studio">
-    <img src="assets/brand/studio/rogueverse-studio-hero.png" alt="RogueVerse Studio surrounded by blue and orange cosmic energy">
-    <div class="studio-hero__actions">
-      <p>Stories. Worlds. Legacies.</p>
-      <a class="button button-primary" href="#worlds">Enter the RogueVerse</a>
-    </div>
-  </section>
+  <header class="site-header rv-header">
+    <a class="brand brand-image" href="#top" aria-label="RogueVerse Studio home">
+      <img src="assets/brand/studio/rogueverse-sword-mark.png" alt="">
+      <span><b>ROGUEVERSE</b><small>STUDIO</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">MENU</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a class="active" href="#top">Home</a>
+      <a href="mythra/">Mythra</a>
+      <a href="old-man-otaku/">AniManga</a>
+      <a href="our-culture/">Our Culture</a>
+      <a href="future/">Future</a>
+      <a href="community/">Community</a>
+      <a href="shop/">Shop</a>
+      <a href="our-story/">About</a>
+    </nav>
+  </header>
 
-  <section id="worlds" class="worlds-section">
-    <div class="worlds-heading">
-      <p>EXPLORE THE STUDIO</p>
-      <h1>Every section is<br><span>its own world.</span></h1>
-    </div>
-
-    <div class="world-showcase">
-      <a class="world-card world-card--wide world-card--mythra" href="mythra/">
-        <img src="assets/2026/mythra-hero.png" alt="RogueVerse Mythra original manga banner">
-        <span class="world-card__cta">Explore Mythra <b>→</b></span>
-      </a>
-
-      <a class="world-card world-card--wide world-card--animanga" href="old-man-otaku/">
-        <img src="assets/2026/animanga-updates.png" alt="AniManga Updates with Old Man Otaku">
-        <span class="world-card__cta">Read AniManga Updates <b>→</b></span>
-      </a>
-
-      <a class="world-card world-card--culture" href="our-culture/">
-        <div class="world-card__live">
-          <small>MOVIES · GAMES · COMICS</small>
-          <h2>Our Culture</h2>
-          <p>The stories we watch, play, collect, and debate.</p>
-          <span>Enter Our Culture →</span>
+  <main id="top">
+    <section class="rv-hero" aria-labelledby="hero-title">
+      <img class="rv-hero__art" src="assets/brand/studio/rogueverse-studio-hero.png" alt="Blue and orange cosmic energy converging around the RogueVerse Studio sword">
+      <div class="rv-hero__shade"></div>
+      <div class="rv-hero__copy">
+        <p class="rv-kicker">WELCOME TO THE ROGUEVERSE</p>
+        <h1 id="hero-title" class="sr-only">RogueVerse Studio</h1>
+        <p class="rv-hero__tagline">Stories. Worlds. Legacies.</p>
+        <p class="rv-hero__intro">Original worlds, fearless creativity, and the culture that inspires all of it—connected inside one studio.</p>
+        <div class="rv-actions">
+          <a class="button button-primary" href="mythra/">Enter Mythra</a>
+          <a class="button button-blue" href="#portals">Explore RogueVerse</a>
         </div>
-      </a>
+      </div>
+      <a class="rv-scroll" href="#portals"><span>Choose your world</span><b>↓</b></a>
+    </section>
 
-      <a class="world-card world-card--future" href="future/">
-        <div class="world-card__live">
-          <small>AI · SCIENCE · SPACE</small>
-          <h2>Future</h2>
-          <p>Technology, discovery, and the worlds arriving next.</p>
-          <span>Look Forward →</span>
+    <section id="portals" class="portal-deck" aria-labelledby="portal-title">
+      <div class="section-title">
+        <p class="rv-kicker">ONE UNIVERSE. MANY DOORS.</p>
+        <h2 id="portal-title">Where do you want to go?</h2>
+        <p>Every branch has its own identity. Every path leads back to RogueVerse Studio.</p>
+      </div>
+
+      <div class="portal-grid">
+        <a class="portal-card portal-card--mythra" href="mythra/">
+          <img src="assets/2026/mythra-hero.png" alt="">
+          <span class="portal-card__wash"></span>
+          <span class="portal-card__copy">
+            <small>ORIGINAL MANGA &amp; STORIES</small>
+            <b>Mythra</b>
+            <em>Enter original worlds.</em>
+            <i>Explore Mythra →</i>
+          </span>
+        </a>
+
+        <a class="portal-card portal-card--animanga" href="old-man-otaku/">
+          <img src="assets/2026/animanga-updates.png" alt="">
+          <span class="portal-card__wash"></span>
+          <span class="portal-card__copy">
+            <small>OLD MAN OTAKU PRESENTS</small>
+            <b>AniManga Updates</b>
+            <em>Anime, manga, webtoons, and light novels.</em>
+            <i>Read the updates →</i>
+          </span>
+        </a>
+
+        <a class="portal-card portal-card--culture" href="our-culture/">
+          <img src="assets/brand/movies/rogueverse-movies-emblem.jpg" alt="">
+          <span class="portal-card__wash"></span>
+          <span class="portal-card__copy">
+            <small>MOVIES · GAMES · GEEK CULTURE</small>
+            <b>Our Culture</b>
+            <em>The things we watch, play, collect, and debate.</em>
+            <i>Join the conversation →</i>
+          </span>
+        </a>
+
+        <a class="portal-card portal-card--future" href="future/">
+          <img src="assets/backgrounds/404-city.png" alt="">
+          <span class="portal-card__wash"></span>
+          <span class="portal-card__copy">
+            <small>AI · SCIENCE · SPACE</small>
+            <b>Future</b>
+            <em>Tomorrow just knocked.</em>
+            <i>Look forward →</i>
+          </span>
+        </a>
+
+        <a class="portal-card portal-card--community" href="community/">
+          <img src="assets/2026/mind.png" alt="">
+          <span class="portal-card__wash"></span>
+          <span class="portal-card__copy">
+            <small>CREATORS · FANS · RECOVERY</small>
+            <b>Community</b>
+            <em>Connect, recover, and grow stronger together.</em>
+            <i>Find your campfire →</i>
+          </span>
+        </a>
+
+        <a class="portal-card portal-card--shop" href="shop/">
+          <img src="assets/backgrounds/market-house-concept.png" alt="">
+          <span class="portal-card__wash"></span>
+          <span class="portal-card__copy">
+            <small>BOOKS · MERCH · MORE</small>
+            <b>Shop</b>
+            <em>Bring a piece of the RogueVerse home.</em>
+            <i>Visit the shop →</i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mythra-feature" aria-labelledby="mythra-feature-title">
+      <div class="section-title section-title--row">
+        <div>
+          <p class="rv-kicker">FEATURED MYTHRA WORLDS</p>
+          <h2 id="mythra-feature-title">Original stories live here.</h2>
         </div>
-      </a>
-    </div>
-  </section>
+        <a class="text-arrow" href="mythra/">View all worlds →</a>
+      </div>
 
-  <section class="create-feature">
-    <div class="create-feature__art">
-      <img src="assets/2026/create-with-mythra.png" alt="Two creators wielding an oversized pencil and digital pen">
-    </div>
-    <div class="create-feature__copy">
-      <small>THE MYTHRA CREATOR NETWORK</small>
-      <h2>Your idea could be<br>the next world.</h2>
-      <p>Writers, artists, and world-builders belong here. Bring the spark. We’ll help you turn it into something that lasts.</p>
-      <a class="button button-primary" href="creators/">Create With Mythra</a>
-    </div>
-  </section>
+      <div class="series-grid">
+        <a class="series-card series-card--sentou" href="mythra/">
+          <img src="assets/2026/under-construction.png" alt="">
+          <span><small>WORLD IN DEVELOPMENT</small><b>Sentou</b><em>The world is their battlefield.</em><i>Discover the series →</i></span>
+        </a>
+        <a class="series-card series-card--love" href="mythra/">
+          <img src="assets/2026/under-construction.png" alt="">
+          <span><small>WORLD IN DEVELOPMENT</small><b>Love × Power</b><em>When fans turn mystery into legend.</em><i>Discover the series →</i></span>
+        </a>
+        <a class="series-card series-card--stranded" href="mythra/">
+          <img src="assets/2026/under-construction.png" alt="">
+          <span><small>WORLD IN DEVELOPMENT</small><b>Stranded in a Bounty Hunter World</b><em>Survive. Adapt. Hunt.</em><i>Discover the series →</i></span>
+        </a>
+      </div>
+    </section>
 
-  <section class="wellness-feature">
-    <div class="wellness-feature__heading">
-      <small>MIND. BODY. HEART.</small>
-      <h2>Every hero needs a place to recover.</h2>
-      <p>Pause the noise, restore your strength, and remember that you do not have to carry everything alone.</p>
-    </div>
-    <div class="wellness-preview">
-      <a href="community/#mind" class="wellness-preview__card">
-        <img src="assets/2026/mind.png" alt="Quiet anime-style Zen courtyard with a bonsai tree">
-        <span><b>Mind</b><small>Quiet the noise.</small></span>
-      </a>
-      <a href="community/#body" class="wellness-preview__card wellness-preview__card--portrait">
-        <img src="assets/2026/body.png" alt="Peaceful mountain lake with tea and floor cushions">
-        <span><b>Body</b><small>Recovery is training.</small></span>
-      </a>
-      <a href="community/#heart" class="wellness-preview__card wellness-preview__card--portrait wellness-preview__card--heart">
-        <img src="assets/2026/heart.png" alt="Warm garden window scene with flowers and a cat">
-        <span><b>Heart</b><small>You belong here.</small></span>
-      </a>
-    </div>
-    <a class="button button-ghost wellness-feature__button" href="community/">Rest at the Campfire</a>
-  </section>
+    <section class="latest-section" aria-labelledby="latest-title">
+      <div class="section-title section-title--row">
+        <div>
+          <p class="rv-kicker">LATEST ACROSS THE ROGUEVERSE</p>
+          <h2 id="latest-title">New signals incoming.</h2>
+        </div>
+      </div>
 
-  <section class="studio-doors">
-    <a href="our-story/"><small>WHY WE EXIST</small><b>Founder’s Message</b><span>Read our story →</span></a>
-    <a href="shop/"><small>BOOKS · MERCH · MORE</small><b>RogueVerse Shop</b><span>Visit the store →</span></a>
-  </section>
-</main>
-<footer class="mega-footer">
-  <div><a class="brand brand-image" href="#top"><img src="assets/brand/studio/rogueverse-sword-mark.png" alt=""><span><b>ROGUEVERSE</b><small>STUDIO</small></span></a><p>Stories. Worlds. Legacies.<br>We create. You live them.</p></div>
-  <nav><b>Explore</b><a href="mythra/">Mythra</a><a href="our-culture/">Our Culture</a><a href="old-man-otaku/">AniManga Updates</a><a href="future/">Future</a><a href="creators/">Create With Mythra</a><a href="community/">Community</a><a href="shop/">Shop</a></nav>
-  <nav><b>Studio</b><a href="our-story/">About</a><a href="our-story/">Contact</a><a href="our-story/">Privacy Policy</a><a href="our-story/">Content Guidelines</a></nav>
-  <div><b>Stay Connected</b><p>Follow RogueVerse Studio for new stories, updates, and releases.</p><a class="button button-primary" href="community/">Join the Community</a></div>
-  <div><b>Official Store</b><p>Books, merchandise, collectibles, and partner products.</p><a class="button button-ghost" href="shop/">Visit Store</a></div>
-  <p class="copyright">© <span data-year></span> RogueVerse Studio. All rights reserved.</p>
-</footer>
-<script src="script.js"></script>
+      <div class="latest-layout">
+        <a class="lead-story" href="old-man-otaku/gundam-xarx-zero/">
+          <img src="assets/2026/animanga-updates.png" alt="">
+          <span class="lead-story__copy">
+            <small>ANIMANGA UPDATE</small>
+            <b>A New Gundam Universe Begins With XARX-ZERO</b>
+            <em>A new timeline, an extraterrestrial threat, and an experimental Gundam.</em>
+            <i>Read the story →</i>
+          </span>
+        </a>
+
+        <div class="story-stack" aria-label="More featured stories">
+          <a href="news/movies/avatar-aang/">
+            <small>OUR CULTURE</small>
+            <b>Avatar Aang Is Back—and All Grown Up</b>
+            <span>Movies &amp; animation →</span>
+          </a>
+          <a href="news/fayetteville-skyeton/">
+            <small>LOCAL CULTURE</small>
+            <b>A Drone Company Picks Fayetteville for Its U.S. Headquarters</b>
+            <span>Read the local angle →</span>
+          </a>
+          <a href="future/">
+            <small>FUTURE</small>
+            <b>Technology, discovery, and the worlds arriving next</b>
+            <span>Explore Future →</span>
+          </a>
+        </div>
+
+        <a class="otaku-pick" href="old-man-otaku/">
+          <img src="assets/brand/old-man-otaku/old-man-otaku-banner.png" alt="Old Man Otaku">
+          <span>
+            <small>OLD MAN OTAKU’S PICK</small>
+            <b>Hand-picked stories worth your time.</b>
+            <i>See his recommendations →</i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="wellness-feature" aria-labelledby="wellness-title">
+      <div class="wellness-feature__heading">
+        <small>MIND. BODY. HEART.</small>
+        <h2 id="wellness-title">Every hero needs a place to recover.</h2>
+        <p>Pause the noise, restore your strength, and remember that you do not have to carry everything alone.</p>
+      </div>
+      <div class="wellness-preview">
+        <a href="community/#mind" class="wellness-preview__card">
+          <img src="assets/2026/mind.png" alt="Quiet anime-style Zen courtyard with a bonsai tree">
+          <span><b>Mind</b><small>Quiet the noise.</small></span>
+        </a>
+        <a href="community/#body" class="wellness-preview__card wellness-preview__card--portrait">
+          <img src="assets/2026/body.png" alt="Peaceful mountain lake with tea and floor cushions">
+          <span><b>Body</b><small>Recovery is training.</small></span>
+        </a>
+        <a href="community/#heart" class="wellness-preview__card wellness-preview__card--portrait wellness-preview__card--heart">
+          <img src="assets/2026/heart.png" alt="Warm garden window scene with flowers and a cat">
+          <span><b>Heart</b><small>You belong here.</small></span>
+        </a>
+      </div>
+      <a class="button button-ghost wellness-feature__button" href="community/">Rest at the Campfire</a>
+    </section>
+
+    <section class="create-feature" aria-labelledby="create-title">
+      <div class="create-feature__art">
+        <img src="assets/2026/create-with-mythra.png" alt="Two creators wielding an oversized pencil and digital pen">
+      </div>
+      <div class="create-feature__copy">
+        <small>THE MYTHRA CREATOR NETWORK</small>
+        <h2 id="create-title">Your idea could be the next world.</h2>
+        <p>Writers, artists, and world-builders belong here. Bring the spark. We’ll help you turn it into something that lasts.</p>
+        <p class="creator-mantra">WRITE · DRAW · BUILD · COLLABORATE</p>
+        <div class="rv-actions">
+          <a class="button button-primary" href="creators/">Create With Mythra</a>
+          <a class="button button-dark" href="creators/#guidelines">Submission Guidelines</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-grid">
+      <a class="closing-card closing-card--future" href="future/">
+        <img src="assets/backgrounds/404-city.png" alt="">
+        <span><small>FROM THE FUTURE</small><b>Tomorrow just knocked.</b><em>AI · Robotics · Space · Science · Innovation</em><i>Answer the door →</i></span>
+      </a>
+      <a class="closing-card closing-card--shop" href="shop/">
+        <img src="assets/backgrounds/market-house-concept.png" alt="">
+        <span><small>THE ROGUEVERSE SHOP</small><b>Take the world with you.</b><em>Original manga, apparel, collectibles, and partner products.</em><i>Visit the store →</i></span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="mega-footer">
+    <div>
+      <a class="brand brand-image" href="#top">
+        <img src="assets/brand/studio/rogueverse-sword-mark.png" alt="">
+        <span><b>ROGUEVERSE</b><small>STUDIO</small></span>
+      </a>
+      <p>Stories. Worlds. Legacies.<br>We create. You live them.</p>
+    </div>
+    <nav><b>Explore</b><a href="mythra/">Mythra</a><a href="old-man-otaku/">AniManga Updates</a><a href="our-culture/">Our Culture</a><a href="future/">Future</a><a href="community/">Community</a><a href="shop/">Shop</a></nav>
+    <nav><b>Studio</b><a href="creators/">Create With Mythra</a><a href="our-story/">About</a><a href="our-story/">Contact</a><a href="our-story/">Privacy Policy</a><a href="our-story/">Content Guidelines</a></nav>
+    <div><b>Stay Connected</b><p>Follow RogueVerse Studio for new stories, updates, and releases.</p><a class="button button-primary" href="community/">Join the Community</a></div>
+    <div><b>Official Store</b><p>Books, merchandise, collectibles, and partner products.</p><a class="button button-ghost" href="shop/">Visit Store</a></div>
+    <p class="copyright">© <span data-year></span> RogueVerse Studio. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>

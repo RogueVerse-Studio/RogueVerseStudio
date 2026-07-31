@@ -27,5 +27,5 @@ belong directly beside the existing `.git` folder.
 - Under Construction artwork
 - Founder’s Message background
 
-TikTok: https://www.tiktok.com/@old_man_otaku  
+TikTok: https://www.tiktok.com/@old_man_otaku
 Square Shop: https://rogueversestudio.square.site/
