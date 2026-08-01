@@ -96,6 +96,8 @@ footer{padding:45px clamp(22px,6vw,92px);display:flex;align-items:center;justify
   .ring-one{width:82vw}.ring-two{width:65vw}.portal-core{width:52vw}
   .section-heading{align-items:flex-start;flex-direction:column}.mythra-emblem{width:100%}
 }
+.article-lead-art{max-width:650px;margin:45px auto}.article-lead-art img{display:block;width:100%;height:auto;box-shadow:0 24px 60px rgba(0,0,0,.32)}
+.article-lead-art figcaption{margin-top:12px;color:#5f6670;font-size:13px;line-height:1.55}.article-support-art{max-width:900px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
 /* Complete-site inner pages */
