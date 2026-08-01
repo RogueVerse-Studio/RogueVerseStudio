@@ -19,10 +19,58 @@ document.querySelectorAll("[data-year]").forEach((node) => {
 
 const rogueSignupButton = [...document.querySelectorAll(".mega-footer .button")]
   .find((button) => button.textContent.trim() === "Join the Community");
+
 if (rogueSignupButton) {
-  rogueSignupButton.classList.add("rogue-signup-button");
-  rogueSignupButton.setAttribute("aria-label", "I’m going rogue");
-  rogueSignupButton.innerHTML = '<span class="rogue-signup-button__lead">I’M GOING</span><span class="rogue-signup-button__rogue">ROGUE</span>';
+  const signupContainer = rogueSignupButton.parentElement;
+  rogueSignupButton.remove();
+
+  const signupForm = document.createElement("form");
+  signupForm.className = "rogue-signup-form embeddable-buttondown-form";
+  signupForm.action = "https://buttondown.com/api/emails/embed-subscribe/RogueVersemedia";
+  signupForm.method = "post";
+  signupForm.target = "_blank";
+  signupForm.innerHTML = `
+    <label class="sr-only" for="rogueverse-email">Email address</label>
+    <input
+      id="rogueverse-email"
+      class="rogue-signup-form__email"
+      type="email"
+      name="email"
+      autocomplete="email"
+      inputmode="email"
+      placeholder="you@example.com"
+      aria-label="Email address"
+      required
+    >
+    <input type="hidden" name="embed" value="1">
+    <input type="hidden" name="tag" value="website">
+    <button class="button button-primary rogue-signup-button" type="submit" aria-label="I’m going rogue">
+      <span class="rogue-signup-button__lead">I’M GOING</span>
+      <span class="rogue-signup-button__rogue">ROGUE</span>
+    </button>
+    <small class="rogue-signup-form__note">New stories, news, culture, and original-world updates. Unsubscribe anytime.</small>
+  `;
+  signupContainer.append(signupForm);
+
+  const signupStyle = document.createElement("style");
+  signupStyle.textContent = `
+    .rogue-signup-form{display:grid;grid-template-columns:minmax(150px,1fr) auto;gap:10px;align-items:stretch;margin-top:12px;max-width:430px}
+    .rogue-signup-form__email{min-width:0;padding:12px 14px;border:1px solid rgba(255,255,255,.22);border-radius:7px;background:#080d15;color:#fff;font:600 13px Inter,sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
+    .rogue-signup-form__email::placeholder{color:#7f8a99}
+    .rogue-signup-form__email:focus{border-color:#1687ff;box-shadow:0 0 0 3px rgba(22,135,255,.16)}
+    .rogue-signup-button{position:relative;overflow:hidden;display:inline-flex!important;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:10px 16px!important;border:1px solid rgba(22,135,255,.65)!important;border-radius:7px!important;background:linear-gradient(125deg,#ff6a00 0%,#ff7b19 58%,#e85100 100%)!important;box-shadow:0 0 0 1px rgba(255,106,0,.28),0 0 18px rgba(22,135,255,.22);color:#fff!important;font-family:Orbitron,sans-serif!important;font-weight:800!important;letter-spacing:.04em;text-transform:uppercase;transform:skewX(-5deg);cursor:pointer;transition:transform .18s,box-shadow .18s,filter .18s}
+    .rogue-signup-button::before{content:"";position:absolute;inset:-40% auto -40% -45%;width:32%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);transform:rotate(15deg);transition:left .45s ease}
+    .rogue-signup-button:hover::before{left:120%}
+    .rogue-signup-button:hover{transform:skewX(-5deg) translateY(-2px);box-shadow:0 0 0 1px rgba(255,106,0,.35),0 0 26px rgba(22,135,255,.38);filter:saturate(1.12)}
+    .rogue-signup-button:active{transform:skewX(-5deg) translateY(1px) scale(.98)}
+    .rogue-signup-button__lead,.rogue-signup-button__rogue{position:relative;z-index:1;display:inline-block;transform:skewX(5deg)}
+    .rogue-signup-button__lead{font-size:10px}
+    .rogue-signup-button__rogue{font:900 15px Russo One,sans-serif;letter-spacing:.06em;text-shadow:1px 0 #1687ff,-1px 0 #ff6a00}
+    .rogue-signup-form__note{grid-column:1/-1;color:#8f98a8;font-size:10px;line-height:1.45}
+    @media(max-width:560px){.rogue-signup-form{grid-template-columns:1fr}.rogue-signup-button{width:100%}.rogue-signup-form__note{grid-column:1}}
+    @media(prefers-reduced-motion:reduce){.rogue-signup-button,.rogue-signup-button::before{transition:none}.rogue-signup-button:hover{transform:skewX(-5deg)}}
+  `;
+  document.head.append(signupStyle);
 }
 
 const toggle = document.querySelector(".menu-toggle");
