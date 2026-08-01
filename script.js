@@ -1,5 +1,129 @@
 const SHOP_URL = "#"; // Replace with the full Square store URL.
 
+// Add the GA4 web data stream's Measurement ID (for example, "G-ABC123DE45")
+// to activate analytics across the entire site.
+const GA_MEASUREMENT_ID = "";
+
+function initializeAnalytics(measurementId) {
+  if (!/^G-[A-Z0-9]+$/i.test(measurementId)) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() {
+    window.dataLayer.push(arguments);
+  };
+
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  const section = pathParts[0] || "home";
+  const isArticle = Boolean(document.querySelector("article, .article-shell"));
+
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId, {
+    send_page_view: false
+  });
+  window.gtag("event", "page_view", {
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: window.location.pathname + window.location.search,
+    content_group: section,
+    content_type: isArticle ? "article" : "section"
+  });
+
+  const googleTag = document.createElement("script");
+  googleTag.async = true;
+  googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  document.head.append(googleTag);
+
+  const sendEvent = (eventName, parameters = {}) => {
+    window.gtag("event", eventName, {
+      page_path: window.location.pathname,
+      content_group: section,
+      ...parameters
+    });
+  };
+
+  document.addEventListener("click", (event) => {
+    const target = event.target instanceof Element
+      ? event.target.closest("a, button")
+      : null;
+    if (!target) return;
+
+    const label = (target.dataset.analyticsLabel || target.textContent || "")
+      .replace(/\s+/g, " ")
+      .trim()
+      .slice(0, 100);
+    const rawHref = target instanceof HTMLAnchorElement
+      ? target.getAttribute("href") || ""
+      : "";
+    const absoluteUrl = target instanceof HTMLAnchorElement
+      ? new URL(target.href, window.location.href)
+      : null;
+    const analyticsText = `${label} ${rawHref}`.toLowerCase();
+    const isOutbound = Boolean(
+      absoluteUrl &&
+      absoluteUrl.protocol.startsWith("http") &&
+      absoluteUrl.hostname !== window.location.hostname
+    );
+
+    let eventName = target.dataset.analyticsEvent || "";
+    if (!eventName && analyticsText.includes("going rogue")) {
+      eventName = "going_rogue_click";
+    } else if (
+      !eventName &&
+      (analyticsText.includes("square.site") ||
+        analyticsText.includes("/shop/") ||
+        /\b(shop|store)\b/.test(label.toLowerCase()))
+    ) {
+      eventName = "store_link_click";
+    } else if (
+      !eventName &&
+      rawHref.toLowerCase().startsWith("mailto:") &&
+      /creator|mythra|artist|writer|portfolio|guidelines|submit|inquiry|join/.test(analyticsText)
+    ) {
+      eventName = "creator_application_click";
+    } else if (!eventName && isOutbound) {
+      eventName = "outbound_link_click";
+    }
+
+    if (!eventName) return;
+
+    sendEvent(eventName, {
+      link_text: label,
+      link_url: rawHref.toLowerCase().startsWith("mailto:")
+        ? "mailto"
+        : absoluteUrl?.href || rawHref,
+      link_domain: absoluteUrl?.hostname || "",
+      outbound: isOutbound
+    });
+  });
+
+  const readingMilestones = isArticle ? [30, 60, 180] : [30, 60];
+  readingMilestones.forEach((seconds) => {
+    window.setTimeout(() => {
+      if (document.visibilityState === "visible") {
+        sendEvent("reading_milestone", { engagement_time_seconds: seconds });
+      }
+    }, seconds * 1000);
+  });
+
+  const reachedScrollDepths = new Set();
+  const reportScrollDepth = () => {
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollableHeight <= 0) return;
+
+    const depth = Math.round((window.scrollY / scrollableHeight) * 100);
+    [25, 50, 75, 90].forEach((milestone) => {
+      if (depth >= milestone && !reachedScrollDepths.has(milestone)) {
+        reachedScrollDepths.add(milestone);
+        sendEvent("scroll_depth", { percent_scrolled: milestone });
+      }
+    });
+  };
+
+  window.addEventListener("scroll", reportScrollDepth, { passive: true });
+}
+
+initializeAnalytics(GA_MEASUREMENT_ID);
+
 document.querySelectorAll("[data-shop-link]").forEach((link) => {
   link.href = SHOP_URL;
   if (SHOP_URL !== "#") {
