@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>RogueVerse Studio</title>
+    <link>https://rogueversemedia.com/</link>
+    <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
+    <language>en-us</language>
+    <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
+
+    <item>
+      <title>Samara Weaving Is an Open-World Agent of Chaos</title>
+      <link>https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/</guid>
+      <description>The scream queen travels with her PS5 and would rather cause trouble than follow the objective marker.</description>
+      <category>Our Culture</category>
+      <category>Gaming</category>
+      <media:content url="https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/assets/feature.webp" medium="image" />
+    </item>
+
+    <item>
+      <title>Horikoshi Is Coming Back—and He Brought Horror With Him</title>
+      <link>https://rogueversemedia.com/old-man-otaku/horikoshi-horror-one-shot/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/old-man-otaku/horikoshi-horror-one-shot/</guid>
+      <description>Kōhei Horikoshi returns to Weekly Shōnen Jump with a new horror one-shot after My Hero Academia.</description>
+      <category>AniManga Updates</category>
+      <category>Manga</category>
+    </item>
+
+    <item>
+      <title>Avatar Aang Is Back—and All Grown Up</title>
+      <link>https://rogueversemedia.com/news/movies/avatar-aang/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/movies/avatar-aang/</guid>
+      <description>RogueVerse looks at the next chapter of Avatar Aang on screen.</description>
+      <category>Our Culture</category>
+      <category>Movies</category>
+    </item>
+
+    <item>
+      <title>A Drone Company Picks Fayetteville for Its U.S. Headquarters</title>
+      <link>https://rogueversemedia.com/news/fayetteville-skyeton/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/fayetteville-skyeton/</guid>
+      <description>A RogueVerse Local Culture look at the Fayetteville headquarters announcement and what it could mean locally.</description>
+      <category>Local Culture</category>
+    </item>
+  </channel>
+</rss>
