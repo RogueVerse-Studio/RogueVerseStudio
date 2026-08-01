@@ -17,6 +17,14 @@ document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
 
+const rogueSignupButton = [...document.querySelectorAll(".mega-footer .button")]
+  .find((button) => button.textContent.trim() === "Join the Community");
+if (rogueSignupButton) {
+  rogueSignupButton.classList.add("rogue-signup-button");
+  rogueSignupButton.setAttribute("aria-label", "I’m going rogue");
+  rogueSignupButton.innerHTML = '<span class="rogue-signup-button__lead">I’M GOING</span><span class="rogue-signup-button__rogue">ROGUE</span>';
+}
+
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".site-nav");
 if (toggle && nav) {
