@@ -146,3 +146,29 @@ footer{padding:45px clamp(22px,6vw,92px);display:flex;align-items:center;justify
   font-family: var(--display);
   letter-spacing: 0.04em;
 }
+
+/* Preserve complete section artwork across desktop and mobile. */
+.destination-card img{
+  object-fit:contain;
+  padding:clamp(10px,2vw,24px);
+  background:radial-gradient(circle at 50% 42%,#172238,#030507 72%);
+}
+
+.story-visual{background:linear-gradient(90deg,rgba(223,227,232,.94),rgba(223,227,232,.76)),url('assets/optimized/our-story-1672.webp') center/cover}
+.error-page{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.65)),url('assets/optimized/404-city-1672.webp')}
+
+.division-hero{
+  background-color:#030507;
+  background-position:center,center;
+  background-repeat:no-repeat,no-repeat;
+  background-size:cover,contain;
+}
+
+.division-hero--wide{
+  background-size:cover,cover;
+}
+
+@media(max-width:900px){
+  .division-hero{padding:32px 20px;background-size:cover,contain}
+  .division-hero--wide{background-size:cover,contain}
+}

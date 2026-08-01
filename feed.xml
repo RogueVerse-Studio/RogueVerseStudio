@@ -1,46 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>RogueVerse Studio</title>
     <link>https://rogueversemedia.com/</link>
     <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
     <language>en-us</language>
+    <lastBuildDate>Sat, 01 Aug 2026 21:30:00 GMT</lastBuildDate>
     <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
+    <image>
+      <url>https://rogueversemedia.com/assets/brand/studio/rogueverse-sword-mark.png</url>
+      <title>RogueVerse Studio</title>
+      <link>https://rogueversemedia.com/</link>
+    </image>
 
     <item>
-      <title>Samara Weaving Is an Open-World Agent of Chaos</title>
+      <title><![CDATA[Will Smith’s Westbrook Is Building an Anime Pipeline—But Its First Production Remains a Mystery]]></title>
+      <link>https://rogueversemedia.com/old-man-otaku/westbrook-studio-azuki-anime/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/old-man-otaku/westbrook-studio-azuki-anime/</guid>
+      <pubDate>Sat, 01 Aug 2026 21:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[OLD MAN OTAKU / ANIME INDUSTRY]]></dc:creator>
+      <category><![CDATA[AniManga Updates]]></category>
+      <category><![CDATA[Anime Industry]]></category>
+      <description><![CDATA[Westbrook has joined Studio Azuki to develop original properties and adaptations for a worldwide audience. What it has not revealed is the show.]]></description>
+      <media:content url="https://rogueversemedia.com/assets/2026/westbrook-studio-azuki/global-anime-pipeline.webp" medium="image" type="image/webp" />
+      <content:encoded><![CDATA[
+        <p><strong>OLD MAN OTAKU / ANIME INDUSTRY</strong></p>
+        <p><img src="https://rogueversemedia.com/assets/2026/westbrook-studio-azuki/global-anime-pipeline.webp" alt="Original RogueVerse illustration of a global anime production studio"></p>
+        <p>Westbrook has joined Studio Azuki to develop original properties and adaptations for a worldwide audience. What it has not revealed is the show.</p>
+        <p><a href="https://rogueversemedia.com/old-man-otaku/westbrook-studio-azuki-anime/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Samara Weaving Is an Open-World Agent of Chaos]]></title>
       <link>https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/</link>
       <guid isPermaLink="true">https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/</guid>
-      <description>The scream queen travels with her PS5 and would rather cause trouble than follow the objective marker.</description>
-      <category>Our Culture</category>
-      <category>Gaming</category>
-      <media:content url="https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/assets/feature.webp" medium="image" />
+      <pubDate>Sat, 01 Aug 2026 20:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[OUR CULTURE / GAMING]]></dc:creator>
+      <category><![CDATA[Our Culture]]></category>
+      <category><![CDATA[Gaming]]></category>
+      <description><![CDATA[The scream queen travels with her PS5 and would rather cause trouble than follow the objective marker.]]></description>
+      <media:content url="https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/assets/feature.webp" medium="image" type="image/webp" />
+      <content:encoded><![CDATA[
+        <p><strong>OUR CULTURE / GAMING</strong></p>
+        <p><img src="https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/assets/feature.webp" alt="Original RogueVerse illustration of an open-world gamer"></p>
+        <p>The scream queen travels with her PS5 and would rather cause trouble than follow the objective marker.</p>
+        <p><a href="https://rogueversemedia.com/news/games/samara-weaving-gamer-open-world-agent-of-chaos/">Read Full Article</a></p>
+      ]]></content:encoded>
     </item>
 
     <item>
-      <title>Horikoshi Is Coming Back—and He Brought Horror With Him</title>
+      <title><![CDATA[Horikoshi Is Coming Back—and He Brought Horror With Him]]></title>
       <link>https://rogueversemedia.com/old-man-otaku/horikoshi-horror-one-shot/</link>
       <guid isPermaLink="true">https://rogueversemedia.com/old-man-otaku/horikoshi-horror-one-shot/</guid>
-      <description>Kōhei Horikoshi returns to Weekly Shōnen Jump with a new horror one-shot after My Hero Academia.</description>
-      <category>AniManga Updates</category>
-      <category>Manga</category>
+      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[OLD MAN OTAKU / MANGA NEWS]]></dc:creator>
+      <category><![CDATA[AniManga Updates]]></category>
+      <category><![CDATA[Manga]]></category>
+      <description><![CDATA[Kōhei Horikoshi returns to Weekly Shōnen Jump with a new horror one-shot after My Hero Academia.]]></description>
+      <media:content url="https://rogueversemedia.com/assets/2026/animanga-updates.png" medium="image" type="image/png" />
+      <content:encoded><![CDATA[
+        <p><strong>OLD MAN OTAKU / MANGA NEWS</strong></p>
+        <p><img src="https://rogueversemedia.com/assets/2026/animanga-updates.png" alt="AniManga Updates with Old Man Otaku"></p>
+        <p>Kōhei Horikoshi returns to <em>Weekly Shōnen Jump</em> with a new horror one-shot after <em>My Hero Academia</em>.</p>
+        <p><a href="https://rogueversemedia.com/old-man-otaku/horikoshi-horror-one-shot/">Read Full Article</a></p>
+      ]]></content:encoded>
     </item>
 
     <item>
-      <title>Avatar Aang Is Back—and All Grown Up</title>
+      <title><![CDATA[Avatar Aang Is Back—and All Grown Up]]></title>
       <link>https://rogueversemedia.com/news/movies/avatar-aang/</link>
       <guid isPermaLink="true">https://rogueversemedia.com/news/movies/avatar-aang/</guid>
-      <description>RogueVerse looks at the next chapter of Avatar Aang on screen.</description>
-      <category>Our Culture</category>
-      <category>Movies</category>
+      <pubDate>Wed, 29 Jul 2026 18:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[ROGUEVERSE MOVIES / ANIMANGA]]></dc:creator>
+      <category><![CDATA[Our Culture]]></category>
+      <category><![CDATA[Movies]]></category>
+      <description><![CDATA[RogueVerse looks at the next chapter of Avatar Aang on screen.]]></description>
+      <media:content url="https://rogueversemedia.com/assets/brand/movies/rogueverse-movies-emblem.jpg" medium="image" type="image/jpeg" />
+      <content:encoded><![CDATA[
+        <p><strong>ROGUEVERSE MOVIES / ANIMANGA</strong></p>
+        <p><img src="https://rogueversemedia.com/assets/brand/movies/rogueverse-movies-emblem.jpg" alt="RogueVerse Movies"></p>
+        <p>RogueVerse looks at the next chapter of Avatar Aang on screen.</p>
+        <p><a href="https://rogueversemedia.com/news/movies/avatar-aang/">Read Full Article</a></p>
+      ]]></content:encoded>
     </item>
 
     <item>
-      <title>A Drone Company Picks Fayetteville for Its U.S. Headquarters</title>
+      <title><![CDATA[A Drone Company Picks Fayetteville for Its U.S. Headquarters]]></title>
       <link>https://rogueversemedia.com/news/fayetteville-skyeton/</link>
       <guid isPermaLink="true">https://rogueversemedia.com/news/fayetteville-skyeton/</guid>
-      <description>A RogueVerse Local Culture look at the Fayetteville headquarters announcement and what it could mean locally.</description>
-      <category>Local Culture</category>
+      <pubDate>Wed, 29 Jul 2026 17:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[ROGUEVERSE NEWS / LOCAL CULTURE]]></dc:creator>
+      <category><![CDATA[Local Culture]]></category>
+      <description><![CDATA[A RogueVerse Local Culture look at the Fayetteville headquarters announcement and what it could mean locally.]]></description>
+      <media:content url="https://rogueversemedia.com/assets/brand/news/rogueverse-news-emblem.jpg" medium="image" type="image/jpeg" />
+      <content:encoded><![CDATA[
+        <p><strong>ROGUEVERSE NEWS / LOCAL CULTURE</strong></p>
+        <p><img src="https://rogueversemedia.com/assets/brand/news/rogueverse-news-emblem.jpg" alt="RogueVerse News"></p>
+        <p>A RogueVerse Local Culture look at the Fayetteville headquarters announcement and what it could mean locally.</p>
+        <p><a href="https://rogueversemedia.com/news/fayetteville-skyeton/">Read Full Article</a></p>
+      ]]></content:encoded>
     </item>
   </channel>
 </rss>
