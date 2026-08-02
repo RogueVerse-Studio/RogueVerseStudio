@@ -59,7 +59,7 @@
 .portal-card__copy em{display:block;color:#d4dbe5;font-style:normal;line-height:1.5}
 .portal-card__copy i,.series-card i,.lead-story i,.otaku-pick i,.closing-card i{display:block;margin-top:18px;color:#fff;font-style:normal;font-weight:800}
 .portal-card--mythra>img,.portal-card--animanga>img{object-position:center}
-.portal-card--culture>img{object-position:center 34%}
+.portal-card--culture>img{object-fit:contain;object-position:center;background:#030507}
 .portal-card--future>img{object-position:60% center}
 .portal-card--shop>img{object-position:center}
 .portal-card--future .portal-card__copy small{color:#bc86ff}
@@ -96,7 +96,7 @@
 .story-stack b{display:block;margin:8px 0;color:#fff;font:700 clamp(18px,1.8vw,26px)/1.13 Russo One,sans-serif;text-transform:uppercase}
 .story-stack span{color:#aeb8c7;font-size:13px}
 .story-stack a:hover{background:#111b2a}
-.otaku-pick>img{object-position:center}
+.otaku-pick>img{object-fit:contain;object-position:center top;background:#030507}
 .otaku-pick b{font-size:clamp(27px,2.7vw,42px)}
 
 .wellness-feature{padding:clamp(78px,8vw,122px) clamp(16px,5vw,76px);text-align:center;background:radial-gradient(circle at 50% 0,rgba(61,139,110,.25),transparent 32%),#07100f}
@@ -107,8 +107,8 @@
 .wellness-preview{max-width:1500px;margin:auto;display:grid;grid-template-columns:1.2fr .9fr .9fr;gap:18px}
 .wellness-preview__card{position:relative;min-height:520px;overflow:hidden;text-align:left;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.18)}
 .wellness-preview__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.wellness-preview__card--portrait img{object-position:center 48%}
-.wellness-preview__card--heart img{object-position:68% center}
+.wellness-preview__card--portrait img{object-fit:contain;object-position:center;background:#07100f}
+.wellness-preview__card--heart img{object-position:center}
 .wellness-preview__card::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,7,7,.94),transparent 55%)}
 .wellness-preview__card:hover img{transform:scale(1.035)}
 .wellness-preview__card>span{position:absolute;z-index:2;left:28px;bottom:28px}
@@ -155,8 +155,7 @@
 @media(max-width:900px){
   .rv-scroll{display:none}
   .portal-card,.portal-card:nth-child(1),.portal-card:nth-child(2){grid-column:1/-1;min-height:420px}
-  .portal-card--mythra>img{object-position:63% center}
-  .portal-card--animanga>img{object-position:60% center}
+  .portal-card--mythra>img,.portal-card--animanga>img{height:55%;object-fit:contain;object-position:center top;background:#05080d}
   .series-grid{grid-template-columns:1fr}
   .series-card{min-height:470px}
   .latest-layout{grid-template-columns:1fr}
@@ -182,8 +181,8 @@
   .wellness-preview{grid-template-columns:1fr}
   .wellness-preview__card:first-child{grid-column:auto}
   .wellness-preview__card{min-height:560px}
-  .create-feature__art{min-height:390px}
-  .create-feature__art img{object-position:52% center}
+  .create-feature__art{min-height:0}
+  .create-feature__art img{display:block;height:auto;object-fit:contain;object-position:center}
   .create-feature__copy{padding:48px 22px}
   .closing-card{min-height:400px}
   .mega-footer{grid-template-columns:1fr}

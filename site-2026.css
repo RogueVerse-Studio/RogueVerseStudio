@@ -9,6 +9,7 @@
 .art-hero__copy h1{font-size:clamp(45px,8vw,115px)}
 .art-hero__copy p{max-width:650px;color:#e0e5ee;font-size:clamp(16px,1.7vw,21px);line-height:1.65}
 .art-hero--clean::after{background:linear-gradient(0deg,rgba(2,4,8,.78),transparent 45%)}
+.art-hero--clean>img{object-fit:contain;background:#030507}
 .art-hero--clean .art-hero__copy{padding-top:0}
 .live-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
 .canon-section{padding:clamp(62px,7vw,108px) clamp(20px,6vw,92px)}
@@ -39,13 +40,15 @@
 .wellness-copy{position:relative;z-index:2;max-width:610px;padding:clamp(28px,7vw,100px)}
 .wellness-copy h2{font-size:clamp(58px,9vw,130px)}.wellness-copy p{font-size:19px;line-height:1.7}
 .wellness-copy ul{padding-left:20px;line-height:1.8}.wellness-card--heart img{object-position:right center}
+.wellness-card--portrait{background:#07100f}
+.wellness-card--portrait img{left:auto;width:62%;object-fit:contain;object-position:right center}
 .creator-split{display:grid;grid-template-columns:1fr 1fr;min-height:660px;background:var(--rv-paper);color:#0a1020}
 .creator-split__copy{padding:clamp(50px,7vw,100px);align-self:center}.creator-split__copy h2{font-size:clamp(48px,7vw,92px)}.creator-split__copy p{font-size:18px;line-height:1.75}
 .creator-split__art{min-height:520px;background:#eee8dc}.creator-split__art img{width:100%;height:100%;object-fit:contain}
 .coming-card{padding:32px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,#10182a,#080c14)}
 .coming-card b{display:block;color:var(--rv-orange);font:23px var(--display);margin-bottom:8px}
 .mega-footer .footer-note{grid-column:1/-1;color:#8f98a8;font-size:12px}
-.founder-message--visual{position:relative;isolation:isolate;min-height:620px;display:flex;flex-direction:column;justify-content:center;padding:clamp(35px,7vw,95px);overflow:hidden;background:linear-gradient(90deg,rgba(3,7,15,.94),rgba(3,7,15,.5) 65%,rgba(3,7,15,.28)),url('assets/backgrounds/market-house-concept.png') center/cover;color:#fff;border:0;border-radius:0}
+.founder-message--visual{position:relative;isolation:isolate;min-height:620px;display:flex;flex-direction:column;justify-content:center;padding:clamp(35px,7vw,95px);overflow:hidden;background:linear-gradient(90deg,rgba(3,7,15,.94),rgba(3,7,15,.5) 65%,rgba(3,7,15,.28)),url('assets/optimized/market-house-1536.webp') center/cover;color:#fff;border:0;border-radius:0}
 .founder-message--visual::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,7,15,.72),transparent 45%)}
 .founder-message--visual p{max-width:650px}.founder-message--visual h2{text-shadow:0 0 28px rgba(22,135,255,.35)}
 .rogue-signup-button{position:relative;isolation:isolate;display:inline-flex!important;align-items:center;gap:.42em;overflow:hidden;padding:13px 18px!important;border:1px solid rgba(255,255,255,.22)!important;background:linear-gradient(135deg,#ff6a00 0%,#ff7b19 48%,#b84200 100%)!important;box-shadow:0 0 0 1px rgba(22,135,255,.25),0 0 26px rgba(255,106,0,.22);transform:skewX(-5deg);text-transform:uppercase;letter-spacing:.04em;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important}
@@ -57,5 +60,6 @@
 .rogue-signup-button__lead{font-size:11px;color:#fff}
 .rogue-signup-button__rogue{font-size:15px;color:#fff;text-shadow:2px 0 0 rgba(22,135,255,.85),-1px 0 0 rgba(0,0,0,.5);letter-spacing:.09em}
 @media(max-width:1000px){.series-shelf,.section-cards{grid-template-columns:repeat(2,1fr)}.creator-split{grid-template-columns:1fr}.creator-split__art{order:-1}}
-@media(max-width:720px){.series-shelf,.section-cards{grid-template-columns:1fr}.art-hero{min-height:520px}.art-hero>img{object-position:center}.art-hero::after{background:linear-gradient(0deg,rgba(2,4,8,.96),rgba(2,4,8,.12) 78%)}.art-hero__copy{padding:28px 20px}.wellness-card{min-height:650px}.wellness-card--heart img{object-position:70% center}.wellness-card::after{background:linear-gradient(0deg,rgba(3,8,12,.92),rgba(3,8,12,.12) 80%)}.wellness-copy{align-self:end}.canon-header .site-nav{top:72px}.rogue-signup-button{width:auto;max-width:100%;justify-content:center}}
+@media(max-width:720px){.series-shelf,.section-cards{grid-template-columns:1fr}.art-hero{display:block;min-height:0}.art-hero>img{position:relative;display:block;height:auto;object-fit:contain;object-position:center}.art-hero::after{background:linear-gradient(0deg,rgba(2,4,8,.96),rgba(2,4,8,.12) 78%)}.art-hero__copy{padding:28px 20px}.wellness-card{min-height:650px}.wellness-card--portrait img{left:0;width:100%;object-fit:cover}.wellness-card--heart img{object-position:70% center}.wellness-card::after{background:linear-gradient(0deg,rgba(3,8,12,.92),rgba(3,8,12,.12) 80%)}.wellness-copy{align-self:end}.canon-header .site-nav{top:72px}.rogue-signup-button{width:auto;max-width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.section-card:hover{transform:none}.rogue-signup-button,.rogue-signup-button::before{transition:none}.rogue-signup-button:hover,.rogue-signup-button:active{transform:skewX(-5deg)}}
+@media(max-width:440px){.canon-header .brand b{font-size:14px}.canon-header .brand small{font-size:8px}.canon-header>.button{padding:12px 15px;font-size:13px}}
