@@ -51,7 +51,8 @@
 .portal-grid{max-width:1500px;margin:auto;display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
 .portal-card{position:relative;grid-column:span 4;min-height:clamp(390px,38vw,590px);isolation:isolate;display:flex;align-items:flex-end;overflow:hidden;color:#fff;text-decoration:none;border:1px solid var(--rv-line);background:#080d15;transition:transform .28s,border-color .28s,box-shadow .28s}
 .portal-card:nth-child(1),.portal-card:nth-child(2){grid-column:span 6;min-height:clamp(360px,33vw,540px)}
-.portal-card>img{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.portal-card>img,.portal-card>picture{position:absolute;z-index:-2;inset:0;width:100%;height:100%}
+.portal-card>img,.portal-card>picture img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
 .portal-card__wash{position:absolute;z-index:-1;inset:0;background:linear-gradient(0deg,rgba(2,4,8,.97),rgba(2,4,8,.18) 75%),linear-gradient(90deg,rgba(2,4,8,.72),transparent 65%)}
 .portal-card__copy{display:block;width:100%;padding:clamp(24px,3vw,42px)}
 .portal-card__copy small,.series-card small,.lead-story small,.story-stack small,.otaku-pick small,.closing-card small{display:block;color:var(--rv-orange);font:700 10px Orbitron,sans-serif;letter-spacing:.16em}
@@ -59,13 +60,13 @@
 .portal-card__copy em{display:block;color:#d4dbe5;font-style:normal;line-height:1.5}
 .portal-card__copy i,.series-card i,.lead-story i,.otaku-pick i,.closing-card i{display:block;margin-top:18px;color:#fff;font-style:normal;font-weight:800}
 .portal-card--mythra>img,.portal-card--animanga>img{object-position:center}
-.portal-card--culture>img{object-fit:contain;object-position:center;background:#030507}
-.portal-card--future>img{object-position:60% center}
-.portal-card--shop>img{object-position:center}
+.portal-card--culture>img,.portal-card--culture>picture img{object-position:center 34%}
+.portal-card--future>img,.portal-card--future>picture img{object-position:60% center}
+.portal-card--shop>img,.portal-card--shop>picture img{object-position:center}
 .portal-card--future .portal-card__copy small{color:#bc86ff}
 .portal-card--community .portal-card__copy small{color:#65d6a4}
 .portal-card:hover{transform:translateY(-7px);border-color:var(--rv-orange);box-shadow:0 24px 60px rgba(0,0,0,.5)}
-.portal-card:hover>img{transform:scale(1.035)}
+.portal-card:hover>img,.portal-card:hover>picture img{transform:scale(1.035)}
 .portal-card:focus-visible{outline:3px solid #fff;outline-offset:3px}
 
 .mythra-feature{background:
@@ -127,13 +128,14 @@
 .closing-grid{display:grid;grid-template-columns:1fr 1fr;background:#04070c}
 .closing-card{position:relative;min-height:440px;isolation:isolate;display:flex;align-items:flex-end;overflow:hidden;color:#fff;text-decoration:none;border-top:1px solid var(--rv-line)}
 .closing-card:first-child{border-right:1px solid var(--rv-line)}
-.closing-card>img{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.closing-card>img,.closing-card>picture{position:absolute;z-index:-2;inset:0;width:100%;height:100%}
+.closing-card>img,.closing-card>picture img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
 .closing-card::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(0deg,rgba(2,4,8,.97),rgba(2,4,8,.18) 78%),linear-gradient(90deg,rgba(2,4,8,.65),transparent)}
 .closing-card>span{display:block;padding:clamp(30px,5vw,70px)}
 .closing-card b{display:block;margin:10px 0;font:700 clamp(35px,4.8vw,68px)/.95 Russo One,sans-serif;text-transform:uppercase}
 .closing-card em{display:block;color:#d6dce6;font-style:normal;line-height:1.6}
 .closing-card--future small{color:#ba7dff}
-.closing-card:hover>img{transform:scale(1.035)}
+.closing-card:hover>img,.closing-card:hover>picture img{transform:scale(1.035)}
 
 .mega-footer{display:grid;grid-template-columns:1.2fr .85fr .85fr 1.15fr 1fr;gap:28px;padding:46px 34px 24px;border-top:1px solid #20262e;background:#030508;color:#aeb7c4}
 .mega-footer nav{display:flex;flex-direction:column;gap:8px}
@@ -189,6 +191,6 @@
   .copyright{grid-column:auto}
 }
 @media(prefers-reduced-motion:reduce){
-  .portal-card,.portal-card>img,.series-card img,.wellness-preview__card img,.closing-card>img{transition:none}
-  .portal-card:hover,.portal-card:hover>img,.series-card:hover img,.wellness-preview__card:hover img,.closing-card:hover>img{transform:none}
+  .portal-card,.portal-card>img,.portal-card>picture img,.series-card img,.wellness-preview__card img,.closing-card>img,.closing-card>picture img{transition:none}
+  .portal-card:hover,.portal-card:hover>img,.portal-card:hover>picture img,.series-card:hover img,.wellness-preview__card:hover img,.closing-card:hover>img,.closing-card:hover>picture img{transform:none}
 }

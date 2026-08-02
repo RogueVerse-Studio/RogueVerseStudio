@@ -63,3 +63,16 @@
 @media(max-width:720px){.series-shelf,.section-cards{grid-template-columns:1fr}.art-hero{display:block;min-height:0}.art-hero>img{position:relative;display:block;height:auto;object-fit:contain;object-position:center}.art-hero::after{background:linear-gradient(0deg,rgba(2,4,8,.96),rgba(2,4,8,.12) 78%)}.art-hero__copy{padding:28px 20px}.wellness-card{min-height:650px}.wellness-card--portrait img{left:0;width:100%;object-fit:cover}.wellness-card--heart img{object-position:70% center}.wellness-card::after{background:linear-gradient(0deg,rgba(3,8,12,.92),rgba(3,8,12,.12) 80%)}.wellness-copy{align-self:end}.canon-header .site-nav{top:72px}.rogue-signup-button{width:auto;max-width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.section-card:hover{transform:none}.rogue-signup-button,.rogue-signup-button::before{transition:none}.rogue-signup-button:hover,.rogue-signup-button:active{transform:skewX(-5deg)}}
 @media(max-width:440px){.canon-header .brand b{font-size:14px}.canon-header .brand small{font-size:8px}.canon-header>.button{padding:12px 15px;font-size:13px}}
+
+/* Responsive illustrated section heroes */
+.section-art-hero{position:relative;min-height:clamp(520px,58vw,820px);display:flex;align-items:flex-end;isolation:isolate;overflow:hidden;background:#05080d;border-bottom:1px solid rgba(255,255,255,.14)}
+.section-art-hero picture,.section-art-hero__art,.section-art-hero__shade{position:absolute;inset:0;width:100%;height:100%}
+.section-art-hero__art{object-fit:cover;object-position:center}
+.section-art-hero__shade{z-index:1;background:linear-gradient(90deg,rgba(2,4,8,.9),rgba(2,4,8,.42) 48%,rgba(2,4,8,.08)),linear-gradient(0deg,rgba(2,4,8,.96),transparent 58%)}
+.section-art-hero__copy{position:relative;z-index:2;max-width:760px;padding:clamp(42px,7vw,104px) clamp(20px,6vw,92px)}
+.section-art-hero__copy h1{margin:.12em 0 .2em;font:700 clamp(52px,8vw,116px)/.86 Russo One,sans-serif;text-transform:uppercase;text-shadow:0 6px 30px #000}
+.section-art-hero__copy>p:last-child{max-width:650px;margin:0;color:#e1e7ef;font-size:clamp(16px,1.5vw,21px);line-height:1.65}
+.section-art-hero--right{justify-content:flex-end;text-align:right}
+.section-art-hero--right .section-art-hero__shade{background:linear-gradient(270deg,rgba(2,4,8,.91),rgba(2,4,8,.42) 48%,rgba(2,4,8,.08)),linear-gradient(0deg,rgba(2,4,8,.96),transparent 58%)}
+.section-art-hero--right .section-art-hero__copy>p:last-child{margin-left:auto}
+@media(max-width:680px){.section-art-hero,.section-art-hero--right{min-height:740px;align-items:flex-end;justify-content:flex-start;text-align:left}.section-art-hero__art{object-position:center top}.section-art-hero__shade,.section-art-hero--right .section-art-hero__shade{background:linear-gradient(0deg,rgba(2,4,8,.98),rgba(2,4,8,.72) 30%,rgba(2,4,8,.08) 72%)}.section-art-hero__copy{padding:46px 20px}.section-art-hero__copy h1{font-size:clamp(48px,17vw,78px)}.section-art-hero--right .section-art-hero__copy>p:last-child{margin-left:0}}
