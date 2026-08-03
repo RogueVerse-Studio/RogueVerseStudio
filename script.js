@@ -126,3 +126,67 @@ if (feed && shell) {
   ).join("");
   shell.append(list);
 }
+
+// RogueVerse Signal visitor counter. CounterAPI V1 is suitable for a lightweight
+// public counter on a static site. A browser is counted at most once per day.
+(() => {
+  const footer = document.querySelector(".mega-footer");
+  if (!footer) return;
+
+  const counter = document.createElement("div");
+  counter.className = "rv-signal-counter";
+  counter.setAttribute("aria-live", "polite");
+  counter.innerHTML = `
+    <span class="rv-signal-counter__label">ROGUEVERSE SIGNAL</span>
+    <strong class="rv-signal-counter__value" data-rv-visitor-count>---</strong>
+    <span class="rv-signal-counter__copy">Rogues have entered the Verse.</span>
+  `;
+
+  const copyright = footer.querySelector(".copyright");
+  if (copyright) footer.insertBefore(counter, copyright);
+  else footer.append(counter);
+
+  const style = document.createElement("style");
+  style.textContent = `
+    .rv-signal-counter{grid-column:1/-1;display:grid;grid-template-columns:auto auto 1fr;gap:9px 14px;align-items:center;margin-top:14px;padding:14px 16px;border:1px solid rgba(22,135,255,.32);border-left:3px solid #ff6a00;border-radius:8px;background:linear-gradient(110deg,rgba(255,106,0,.07),rgba(22,135,255,.07) 60%,rgba(8,13,21,.35));box-shadow:inset 0 0 24px rgba(22,135,255,.04)}
+    .rv-signal-counter__label{font:800 10px Orbitron,sans-serif;letter-spacing:.16em;color:#ff7b19}
+    .rv-signal-counter__value{font:900 20px Orbitron,sans-serif;letter-spacing:.04em;color:#fff;text-shadow:0 0 12px rgba(22,135,255,.42)}
+    .rv-signal-counter__copy{font:600 11px Inter,sans-serif;color:#8f98a8}
+    @media(max-width:620px){.rv-signal-counter{grid-template-columns:1fr auto}.rv-signal-counter__copy{grid-column:1/-1}}
+  `;
+  document.head.append(style);
+
+  const valueNode = counter.querySelector("[data-rv-visitor-count]");
+  const namespace = "rogueversemedia.com";
+  const name = "site-visitors";
+  const base = `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}`;
+  const today = new Date().toISOString().slice(0, 10);
+  const storageKey = "rv-visitor-counted-date";
+
+  let endpoint = base;
+  try {
+    if (localStorage.getItem(storageKey) !== today) endpoint = `${base}/up`;
+  } catch (_) {
+    endpoint = `${base}/up`;
+  }
+
+  fetch(endpoint, { method: "GET", mode: "cors", cache: "no-store" })
+    .then((response) => {
+      if (!response.ok) throw new Error(`Counter request failed: ${response.status}`);
+      return response.json();
+    })
+    .then((data) => {
+      const raw = data.count ?? data.value;
+      const numeric = Number(raw);
+      valueNode.textContent = Number.isFinite(numeric)
+        ? numeric.toLocaleString()
+        : String(raw ?? "---");
+      if (endpoint.endsWith("/up")) {
+        try { localStorage.setItem(storageKey, today); } catch (_) {}
+      }
+    })
+    .catch(() => {
+      valueNode.textContent = "ONLINE";
+      counter.querySelector(".rv-signal-counter__copy").textContent = "Signal tracking is active.";
+    });
+})();
