@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>RogueVerse Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&family=Russo+One&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#050912;--panel:#0b1220;--line:#1b2a3e;--text:#f4f7fb;--muted:#8d9aad;--orange:#ff6a00;--blue:#1687ff}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0,rgba(255,106,0,.12),transparent 28%),radial-gradient(circle at 85% 0,rgba(22,135,255,.12),transparent 30%),var(--bg);color:var(--text);font-family:Inter,sans-serif}
+    header,main{width:min(1160px,calc(100% - 32px));margin:auto}header{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:28px 0 18px;border-bottom:1px solid var(--line)}
+    .brand{font:800 18px Orbitron,sans-serif;letter-spacing:.08em}.brand span{color:var(--orange)}.back{color:#b9c6d7;text-decoration:none;font-weight:700;font-size:13px}
+    .hero{padding:42px 0 22px}.kicker{font:800 11px Orbitron,sans-serif;letter-spacing:.18em;color:var(--orange);margin:0 0 10px}.hero h1{font:900 clamp(32px,6vw,64px) Russo One,sans-serif;line-height:.95;margin:0 0 14px}.hero p{max-width:760px;color:var(--muted);line-height:1.7}
+    .status{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:8px 11px;border:1px solid rgba(22,135,255,.35);border-radius:999px;background:rgba(22,135,255,.07);font-size:12px;font-weight:700}.dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px rgba(255,106,0,.7)}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0}.card{min-height:136px;padding:18px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(255,255,255,.01)),var(--panel)}.card small{display:block;color:var(--muted);font:700 10px Orbitron,sans-serif;letter-spacing:.11em}.metric{display:block;margin-top:18px;font:800 30px Orbitron,sans-serif}.metric.orange{color:var(--orange)}.metric.blue{color:#58a9ff}
+    section.panel{margin:18px 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}section.panel h2{font:700 18px Orbitron,sans-serif;margin:0 0 14px}.rows{display:grid;gap:10px}.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:12px 0;border-top:1px solid rgba(255,255,255,.06)}.row:first-child{border-top:0}.row b{font-size:14px}.row span{color:var(--muted);font-size:12px}.row strong{font:700 15px Orbitron,sans-serif}
+    .notice{border-left:3px solid var(--orange);padding:14px 16px;background:rgba(255,106,0,.06);color:#c9d2df;line-height:1.6;font-size:13px}.notice b{color:#fff}
+    footer{width:min(1160px,calc(100% - 32px));margin:40px auto;padding:22px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+    @media(max-width:820px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.hero{padding-top:30px}}
+  </style>
+</head>
+<body>
+<header><div class="brand"><span>ROGUEVERSE</span> ANALYTICS</div><a class="back" href="../">← Back to site</a></header>
+<main>
+  <section class="hero">
+    <p class="kicker">NEWSROOM SIGNAL BOARD</p>
+    <h1>Know what the Verse is doing.</h1>
+    <p>This dashboard reads RogueVerse’s live public counters. It is intentionally excluded from search indexing and is not linked from the public site navigation.</p>
+    <div class="status"><span class="dot"></span><span id="system-status">Counter system checking…</span></div>
+  </section>
+
+  <div class="grid">
+    <div class="card"><small>TOTAL SITE VISITORS</small><strong class="metric orange" id="site-total">---</strong></div>
+    <div class="card"><small>TRACKING MODE</small><strong class="metric blue">LIVE</strong></div>
+    <div class="card"><small>ARTICLE COUNTERS</small><strong class="metric" id="article-status">ACTIVE</strong></div>
+    <div class="card"><small>PRIVATE ANALYTICS</small><strong class="metric" style="font-size:20px">NOT CONNECTED</strong></div>
+  </div>
+
+  <section class="panel">
+    <h2>Tracked Article Snapshot</h2>
+    <div class="rows" id="article-rows"></div>
+  </section>
+
+  <section class="panel">
+    <h2>System Notes</h2>
+    <div class="notice"><b>Public counter layer is active.</b> This dashboard can display the visitor and article counters already deployed. Geographic location, device reports, realtime concurrent users, search queries, detailed referral attribution, and authenticated/private reporting require a private analytics provider such as GA4 or CounterAPI V2.</div>
+  </section>
+</main>
+<footer>RogueVerse Studio internal traffic board · Counter data begins from the date each counter was introduced.</footer>
+<script>
+const API='https://api.counterapi.dev/v1/rogueversemedia.com/';
+const articles=[
+  ['Mushoku Tensei Season 3 Is Anime’s Most Problematic Hit','article-old-man-otaku-mushoku-tensei-season-3-problematic-hit-2026'],
+  ['Samara Weaving Is an Open-World Agent of Chaos','article-news-games-samara-weaving-gamer-open-world-agent-of-chaos'],
+  ['Horikoshi Is Coming Back—and He Brought Horror With Him','article-old-man-otaku-horikoshi-horror-one-shot'],
+  ['Avatar Aang Is Back—and All Grown Up','article-news-movies-avatar-aang']
+];
+function getCount(name){return fetch(API+encodeURIComponent(name),{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(d=>Number(d.count??d.value??0))}
+getCount('site-visitors').then(n=>{document.querySelector('#site-total').textContent=n.toLocaleString();document.querySelector('#system-status').textContent='RogueVerse Signal is online'}).catch(()=>{document.querySelector('#site-total').textContent='OFFLINE';document.querySelector('#system-status').textContent='Counter service unavailable'});
+const rows=document.querySelector('#article-rows');
+articles.forEach(([title,key])=>{
+  const row=document.createElement('div');row.className='row';row.innerHTML=`<div><b>${title}</b><br><span>${key.replace(/^article-/,'').replaceAll('-',' ')}</span></div><strong>---</strong>`;rows.append(row);
+  getCount(key).then(n=>row.querySelector('strong').textContent=n.toLocaleString()+' reads').catch(()=>row.querySelector('strong').textContent='not started');
+});
+</script>
+</body>
+</html>
