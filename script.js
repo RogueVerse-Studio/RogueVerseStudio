@@ -190,3 +190,74 @@ if (feed && shell) {
       counter.querySelector(".rv-signal-counter__copy").textContent = "Signal tracking is active.";
     });
 })();
+
+// Article read counter. Each article gets its own path-derived counter and a
+// visitor is counted once per article per day in this browser.
+(() => {
+  const article = document.querySelector("article.article-shell");
+  if (!article || !document.body.classList.contains("article-page")) return;
+
+  const headline = article.querySelector("h1");
+  if (!headline) return;
+
+  const normalizedPath = location.pathname.replace(/\/+$/, "").replace(/^\/+/, "");
+  if (!normalizedPath) return;
+
+  const counterName = `article-${normalizedPath}`
+    .toLowerCase()
+    .replace(/[^a-z0-9/-]+/g, "-")
+    .replace(/[\/]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 120);
+
+  const badge = document.createElement("div");
+  badge.className = "rv-article-reads";
+  badge.setAttribute("aria-live", "polite");
+  badge.innerHTML = `<span class="rv-article-reads__pulse" aria-hidden="true"></span><strong data-rv-article-reads>---</strong><span>reads</span>`;
+
+  const dek = article.querySelector(".dek");
+  const anchor = dek || headline;
+  anchor.insertAdjacentElement("afterend", badge);
+
+  if (!document.querySelector("style[data-rv-article-reads-style]")) {
+    const style = document.createElement("style");
+    style.dataset.rvArticleReadsStyle = "true";
+    style.textContent = `
+      .rv-article-reads{display:inline-flex;align-items:center;gap:7px;margin:8px 0 18px;padding:7px 10px;border:1px solid rgba(22,135,255,.25);border-radius:999px;background:rgba(8,13,21,.72);font:700 11px Inter,sans-serif;color:#9ba8ba;letter-spacing:.04em}
+      .rv-article-reads strong{font-family:Orbitron,sans-serif;font-size:12px;color:#fff}
+      .rv-article-reads__pulse{width:7px;height:7px;border-radius:50%;background:#ff6a00;box-shadow:0 0 10px rgba(255,106,0,.72)}
+    `;
+    document.head.append(style);
+  }
+
+  const valueNode = badge.querySelector("[data-rv-article-reads]");
+  const namespace = "rogueversemedia.com";
+  const base = `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(counterName)}`;
+  const today = new Date().toISOString().slice(0, 10);
+  const storageKey = `rv-read:${normalizedPath}:${today}`;
+  let endpoint = base;
+
+  try {
+    if (!localStorage.getItem(storageKey)) endpoint = `${base}/up`;
+  } catch (_) {
+    endpoint = `${base}/up`;
+  }
+
+  fetch(endpoint, { method: "GET", mode: "cors", cache: "no-store" })
+    .then((response) => {
+      if (!response.ok) throw new Error(`Article counter request failed: ${response.status}`);
+      return response.json();
+    })
+    .then((data) => {
+      const raw = data.count ?? data.value;
+      const numeric = Number(raw);
+      valueNode.textContent = Number.isFinite(numeric) ? numeric.toLocaleString() : String(raw ?? "---");
+      if (endpoint.endsWith("/up")) {
+        try { localStorage.setItem(storageKey, "1"); } catch (_) {}
+      }
+    })
+    .catch(() => {
+      badge.hidden = true;
+    });
+})();
