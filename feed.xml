@@ -9,13 +9,31 @@
     <link>https://rogueversemedia.com/</link>
     <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 13:20:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 14:00:00 GMT</lastBuildDate>
     <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://rogueversemedia.com/assets/brand/studio/rogueverse-sword-mark.png</url>
       <title>RogueVerse Studio</title>
       <link>https://rogueversemedia.com/</link>
     </image>
+
+    <item>
+      <title><![CDATA[KonoSuba Changes Studios Again—But Its Comedic Brain Trust Is Staying]]></title>
+      <link>https://rogueversemedia.com/old-man-otaku/konosuba-season-4-studio-change/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/old-man-otaku/konosuba-season-4-studio-change/</guid>
+      <pubDate>Mon, 03 Aug 2026 14:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[OLD MAN OTAKU / ANIME PRODUCTION]]></dc:creator>
+      <category><![CDATA[AniManga Updates]]></category>
+      <category><![CDATA[Anime Production]]></category>
+      <description><![CDATA[ENGI is taking over KonoSuba Season 4, but most of the creative team responsible for the anime's chaotic identity is making the move with it.]]></description>
+      <media:content url="https://rogueversemedia.com/old-man-otaku/konosuba-season-4-studio-change/assets/konosuba-season-4-hero.webp" medium="image" type="image/webp" />
+      <content:encoded><![CDATA[
+        <p><strong>OLD MAN OTAKU / ANIME PRODUCTION</strong></p>
+        <p><img src="https://rogueversemedia.com/old-man-otaku/konosuba-season-4-studio-change/assets/konosuba-season-4-hero.webp" alt="Original RogueVerse fantasy-comedy adventuring party approaching a city"></p>
+        <p>ENGI is new to KonoSuba, but most of the creative team responsible for its chaotic personality is staying.</p>
+        <p><a href="https://rogueversemedia.com/old-man-otaku/konosuba-season-4-studio-change/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title><![CDATA[Jo Martin's Fugitive Doctor Takes Center Stage in Doctor Who: Circuit Breaker]]></title>
