@@ -9,13 +9,32 @@
     <link>https://rogueversemedia.com/</link>
     <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 14:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 14:45:00 GMT</lastBuildDate>
     <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://rogueversemedia.com/assets/brand/studio/rogueverse-sword-mark.png</url>
       <title>RogueVerse Studio</title>
       <link>https://rogueversemedia.com/</link>
     </image>
+
+    <item>
+      <title><![CDATA[Spider-Man: Brand New Day Is a Strong Emotional Reset Trapped Inside a Crowded Franchise Machine]]></title>
+      <link>https://rogueversemedia.com/news/movies/spider-man-brand-new-day-review/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/movies/spider-man-brand-new-day-review/</guid>
+      <pubDate>Mon, 03 Aug 2026 14:45:00 GMT</pubDate>
+      <dc:creator><![CDATA[ROGUEVERSE MOVIES / REVIEW]]></dc:creator>
+      <category><![CDATA[Movies]]></category>
+      <category><![CDATA[Reviews]]></category>
+      <category><![CDATA[Movie Signal]]></category>
+      <description><![CDATA[Exactly 50 professional reviews, a spoiler-aware story analysis, and RogueVerse's transparent 69/100 Movie Signal verdict.]]></description>
+      <media:content url="https://rogueversemedia.com/news/movies/spider-man-brand-new-day-review/assets/brand-new-day-hero.webp" medium="image" type="image/webp" />
+      <content:encoded><![CDATA[
+        <p><strong>ROGUEVERSE MOVIES / REVIEW</strong></p>
+        <p><img src="https://rogueversemedia.com/news/movies/spider-man-brand-new-day-review/assets/brand-new-day-hero.webp" alt="Original RogueVerse anime guardian overlooking a city at sunrise"></p>
+        <p>RogueVerse averaged exactly 50 professional critic scores and found a simple mean of 68.82: a 69/100 Divided Signal.</p>
+        <p><a href="https://rogueversemedia.com/news/movies/spider-man-brand-new-day-review/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title><![CDATA[KonoSuba Changes Studios Again—But Its Comedic Brain Trust Is Staying]]></title>
