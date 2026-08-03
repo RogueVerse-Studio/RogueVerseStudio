@@ -9,13 +9,32 @@
     <link>https://rogueversemedia.com/</link>
     <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2026 21:30:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 13:20:00 GMT</lastBuildDate>
     <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://rogueversemedia.com/assets/brand/studio/rogueverse-sword-mark.png</url>
       <title>RogueVerse Studio</title>
       <link>https://rogueversemedia.com/</link>
     </image>
+
+    <item>
+      <title><![CDATA[Jo Martin's Fugitive Doctor Takes Center Stage in Doctor Who: Circuit Breaker]]></title>
+      <link>https://rogueversemedia.com/news/doctor-who-circuit-breaker-fugitive-doctor-audio-finale/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/doctor-who-circuit-breaker-fugitive-doctor-audio-finale/</guid>
+      <pubDate>Mon, 03 Aug 2026 13:20:00 GMT</pubDate>
+      <dc:creator><![CDATA[OUR CULTURE / ENTERTAINMENT]]></dc:creator>
+      <category><![CDATA[Our Culture]]></category>
+      <category><![CDATA[Entertainment]]></category>
+      <category><![CDATA[Doctor Who]]></category>
+      <description><![CDATA[Jo Martin's Fugitive Doctor leads Full Circuit, the two-hour audio finale of Doctor Who's official Circuit Breaker event.]]></description>
+      <media:content url="https://rogueversemedia.com/news/doctor-who-circuit-breaker-fugitive-doctor-audio-finale/assets/doctor-who-circuit-breaker-01.jpg" medium="image" type="image/jpeg" />
+      <content:encoded><![CDATA[
+        <p><strong>OUR CULTURE / ENTERTAINMENT</strong></p>
+        <p><img src="https://rogueversemedia.com/news/doctor-who-circuit-breaker-fugitive-doctor-audio-finale/assets/doctor-who-circuit-breaker-01.jpg" alt="Original RogueVerse illustration announcing the Doctor Who Circuit Breaker finale"></p>
+        <p>Jo Martin's Fugitive Doctor leads <em>Full Circuit</em>, the two-hour audio finale of Doctor Who's official cross-platform event.</p>
+        <p><a href="https://rogueversemedia.com/news/doctor-who-circuit-breaker-fugitive-doctor-audio-finale/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title><![CDATA[Will Smith’s Westbrook Is Building an Anime Pipeline—But Its First Production Remains a Mystery]]></title>
