@@ -9,13 +9,32 @@
     <link>https://rogueversemedia.com/</link>
     <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 16:21:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 13:00:00 GMT</lastBuildDate>
     <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://rogueversemedia.com/assets/brand/studio/rogueverse-sword-mark.png</url>
       <title>RogueVerse Studio</title>
       <link>https://rogueversemedia.com/</link>
     </image>
+
+    <item>
+      <title><![CDATA[Tom Holland Has a Plan to Pass the Spider-Man Torch—but He Is Not Leaving Yet]]></title>
+      <link>https://rogueversemedia.com/news/movies/tom-holland-spider-man-torch/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/movies/tom-holland-spider-man-torch/</guid>
+      <pubDate>Tue, 04 Aug 2026 13:00:00 GMT</pubDate>
+      <dc:creator><![CDATA[ROGUEVERSE MOVIES / INDUSTRY]]></dc:creator>
+      <category><![CDATA[Movies]]></category>
+      <category><![CDATA[Spider-Man]]></category>
+      <category><![CDATA[Industry]]></category>
+      <description><![CDATA[Tom Holland confirmed a long-term Spider-Man handoff vision—not his departure. RogueVerse separates the Miles Morales clues from the retirement rumors.]]></description>
+      <media:content url="https://rogueversemedia.com/news/movies/tom-holland-spider-man-torch/assets/feature.webp" medium="image" type="image/webp" />
+      <content:encoded><![CDATA[
+        <p><strong>ROGUEVERSE MOVIES / INDUSTRY</strong></p>
+        <p><img src="https://rogueversemedia.com/news/movies/tom-holland-spider-man-torch/assets/feature.webp" alt="Original anime guardian holding a glowing relay baton above a futuristic city"></p>
+        <p>Holland says an eventual handoff has been discussed since <em>No Way Home</em>, but no retirement date, successor casting or Miles Morales film has been announced.</p>
+        <p><a href="https://rogueversemedia.com/news/movies/tom-holland-spider-man-torch/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title><![CDATA[BLACK TORCH Is Finally Popular. But Did Anime Arrive Too Late to Save Its Identity?]]></title>
