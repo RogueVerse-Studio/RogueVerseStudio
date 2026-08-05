@@ -127,8 +127,8 @@ if (feed && shell) {
   shell.append(list);
 }
 
-// RogueVerse Signal visitor counter. CounterAPI V1 is suitable for a lightweight
-// public counter on a static site. A browser is counted at most once per day.
+// RogueVerse Signal total visit counter. Every page load across the website,
+// from every visitor (including the site owner), increments one shared count.
 (() => {
   const footer = document.querySelector(".mega-footer");
   if (!footer) return;
@@ -139,7 +139,7 @@ if (feed && shell) {
   counter.innerHTML = `
     <span class="rv-signal-counter__label">ROGUEVERSE SIGNAL</span>
     <strong class="rv-signal-counter__value" data-rv-visitor-count>---</strong>
-    <span class="rv-signal-counter__copy">Rogues have entered the Verse.</span>
+    <span class="rv-signal-counter__copy">Total visits across the Verse.</span>
   `;
 
   const copyright = footer.querySelector(".copyright");
@@ -159,16 +159,7 @@ if (feed && shell) {
   const valueNode = counter.querySelector("[data-rv-visitor-count]");
   const namespace = "rogueversemedia.com";
   const name = "site-visitors";
-  const base = `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}`;
-  const today = new Date().toISOString().slice(0, 10);
-  const storageKey = "rv-visitor-counted-date";
-
-  let endpoint = base;
-  try {
-    if (localStorage.getItem(storageKey) !== today) endpoint = `${base}/up`;
-  } catch (_) {
-    endpoint = `${base}/up`;
-  }
+  const endpoint = `https://api.counterapi.dev/v1/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/up`;
 
   fetch(endpoint, { method: "GET", mode: "cors", cache: "no-store" })
     .then((response) => {
@@ -181,9 +172,6 @@ if (feed && shell) {
       valueNode.textContent = Number.isFinite(numeric)
         ? numeric.toLocaleString()
         : String(raw ?? "---");
-      if (endpoint.endsWith("/up")) {
-        try { localStorage.setItem(storageKey, today); } catch (_) {}
-      }
     })
     .catch(() => {
       valueNode.textContent = "ONLINE";
