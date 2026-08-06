@@ -9,13 +9,50 @@
     <link>https://rogueversemedia.com/</link>
     <description>New stories, news, culture, technology, and original worlds from RogueVerse Studio.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Aug 2026 13:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 06 Aug 2026 14:05:00 GMT</lastBuildDate>
     <atom:link href="https://rogueversemedia.com/feed.xml" rel="self" type="application/rss+xml" />
     <image>
       <url>https://rogueversemedia.com/assets/brand/studio/rogueverse-sword-mark.png</url>
       <title>RogueVerse Studio</title>
       <link>https://rogueversemedia.com/</link>
     </image>
+
+    <item>
+      <title><![CDATA[Leading Us Through Doomsday: Why Them, Though?]]></title>
+      <link>https://rogueversemedia.com/news/movies/avengers-doomsday-leading-us-through-doomsday/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/news/movies/avengers-doomsday-leading-us-through-doomsday/</guid>
+      <pubDate>Thu, 06 Aug 2026 12:39:00 GMT</pubDate>
+      <dc:creator><![CDATA[OUR CULTURE / MOVIES & TV]]></dc:creator>
+      <category><![CDATA[Movies]]></category>
+      <category><![CDATA[Marvel]]></category>
+      <category><![CDATA[Deep Dive]]></category>
+      <description><![CDATA[Steve Rogers is the compass. Reed Richards is the map. Doctor Doom wants to be both. RogueVerse examines why these two heroes make sense as anchors for Avengers: Doomsday.]]></description>
+      <media:content url="https://rogueversemedia.com/news/movies/avengers-doomsday-leading-us-through-doomsday/assets/leading-us-through-doomsday-header.svg" medium="image" type="image/svg+xml" />
+      <content:encoded><![CDATA[
+        <p><strong>OUR CULTURE / MOVIES &amp; TV</strong></p>
+        <p>Why Steve Rogers and Reed Richards are uniquely suited to guide audiences through an Avengers story built around multiversal collapse and Doctor Doom.</p>
+        <p><a href="https://rogueversemedia.com/news/movies/avengers-doomsday-leading-us-through-doomsday/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Demon Slayer: Infinity Castle Didn’t Stop at $793 Million. Now Its Second Life on Crunchyroll Has Begun]]></title>
+      <link>https://rogueversemedia.com/old-man-otaku/demon-slayer-infinity-castle-crunchyroll-793m/</link>
+      <guid isPermaLink="true">https://rogueversemedia.com/old-man-otaku/demon-slayer-infinity-castle-crunchyroll-793m/</guid>
+      <pubDate>Thu, 06 Aug 2026 11:42:00 GMT</pubDate>
+      <dc:creator><![CDATA[OLD MAN OTAKU / ANIME INDUSTRY]]></dc:creator>
+      <category><![CDATA[AniManga Updates]]></category>
+      <category><![CDATA[Anime Industry]]></category>
+      <category><![CDATA[Demon Slayer]]></category>
+      <description><![CDATA[Infinity Castle turned a roughly $793.5 million theatrical run into a second global launch on Crunchyroll. RogueVerse examines what that says about anime's new blockbuster economy.]]></description>
+      <media:content url="https://rogueversemedia.com/old-man-otaku/demon-slayer-infinity-castle-crunchyroll-793m/assets/demon-slayer-infinity-castle-header-1600x900.png" medium="image" type="image/png" />
+      <content:encoded><![CDATA[
+        <p><strong>OLD MAN OTAKU / ANIME INDUSTRY</strong></p>
+        <p><img src="https://rogueversemedia.com/old-man-otaku/demon-slayer-infinity-castle-crunchyroll-793m/assets/demon-slayer-infinity-castle-header-1600x900.png" alt="Demon Slayer Infinity Castle editorial header"></p>
+        <p>The highest-grossing anime film ever has begun its second life on Crunchyroll, creating another major event around the same release.</p>
+        <p><a href="https://rogueversemedia.com/old-man-otaku/demon-slayer-infinity-castle-crunchyroll-793m/">Read Full Article</a></p>
+      ]]></content:encoded>
+    </item>
 
     <item>
       <title><![CDATA[Tom Holland Has a Plan to Pass the Spider-Man Torch—but He Is Not Leaving Yet]]></title>
