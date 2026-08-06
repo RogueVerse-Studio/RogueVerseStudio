@@ -1,1 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d"><title id="t">For Honor Refuses to Die</title><desc id="d">Original RogueVerse editorial illustration of three generic anime-inspired medieval fighters on a storm-lit battlefield.</desc><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08111f"/><stop offset=".5" stop-color="#101d35"/><stop offset="1" stop-color="#05070c"/></linearGradient><linearGradient id="fire" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#ff7a18"/><stop offset="1" stop-color="#ffc46b"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bg)"/><circle cx="1320" cy="150" r="210" fill="#1a6fff" opacity=".16"/><circle cx="220" cy="760" r="260" fill="#ff7a18" opacity=".12"/><path d="M0 690 Q260 620 520 690 T1040 670 T1600 690 V900 H0Z" fill="#0a0d14"/><g fill="#ff7a18" opacity=".9"><path d="M110 710l34-88 18 65 35-108 19 131z"/><path d="M1400 735l28-92 18 64 40-124 17 152z"/></g><g stroke="#f7f7f7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(520 250)"><circle cx="0" cy="0" r="64" fill="#d7dce5"/><path d="M-55-10Q0-90 55-10L38 25H-38Z" fill="#36445d"/><path d="M-86 86Q0 40 86 86L125 300H-125Z" fill="#1d2a3f"/><path d="M-96 120L-190 230M96 120l185 140"/><path d="M270 180l-35 140M250 195l65 20"/></g><g transform="translate(820 230)"><circle cx="0" cy="0" r="62" fill="#d9c9b5"/><path d="M-62-15Q0-95 62-15L35 18H-35Z" fill="#5d382d"/><path d="M-82 86Q0 35 82 86L110 320H-110Z" fill="#4d2a20"/><path d="M-88 125L-215 285M88 125l125 155"/><path d="M-230 270l-20-135M-244 155l60-12"/></g><g transform="translate(1090 260)"><circle cx="0" cy="0" r="60" fill="#e0d7cc"/><path d="M-60-8Q0-92 60-8L40 18H-40Z" fill="#1f2024"/><path d="M-80 84Q0 35 80 84L118 300H-118Z" fill="#16191f"/><path d="M-88 122L-210 250M88 122l180 100"/><path d="M260 180l-25 145M245 195l70 10"/></g></g><g font-family="Arial,Helvetica,sans-serif" fill="#fff"><text x="100" y="120" font-size="36" font-weight="700" fill="#ff7a18">ROGUEVERSE GAMES</text><text x="100" y="205" font-size="88" font-weight="900">FOR HONOR</text><text x="100" y="285" font-size="72" font-weight="900">REFUSES TO DIE</text><text x="104" y="342" font-size="30" fill="#b9c8de">How Ubisoft’s 2017 fighter made it to Year 10</text></g><text x="100" y="835" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#9ba8ba">Original RogueVerse Media editorial artwork • Generic anime-inspired fighters</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">For Honor Year 10: The Battle Continues</title>
+<desc id="d">Original RogueVerse Media 1600 by 900 game-inspired anime action artwork with generic knight, samurai and Viking archetypes on a split fire-and-ice battlefield.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#05070b"/><stop offset=".46" stop-color="#17110d"/><stop offset=".55" stop-color="#081423"/><stop offset="1" stop-color="#02050a"/></linearGradient>
+  <radialGradient id="fire"><stop stop-color="#ffb14a"/><stop offset=".45" stop-color="#ff5b13"/><stop offset="1" stop-color="#7b1400" stop-opacity="0"/></radialGradient>
+  <radialGradient id="ice"><stop stop-color="#bde8ff"/><stop offset=".42" stop-color="#2c9dff"/><stop offset="1" stop-color="#083b73" stop-opacity="0"/></radialGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9eef3"/><stop offset=".28" stop-color="#8997a7"/><stop offset=".62" stop-color="#303945"/><stop offset="1" stop-color="#0e131b"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff0a1"/><stop offset=".45" stop-color="#f2b338"/><stop offset="1" stop-color="#d26012"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000" flood-opacity=".8"/></filter>
+  <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse"><circle cx="15" cy="18" r="1" fill="#fff" opacity=".1"/><circle cx="78" cy="44" r="1.5" fill="#fff" opacity=".08"/><circle cx="42" cy="92" r="1" fill="#fff" opacity=".08"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<ellipse cx="310" cy="565" rx="520" ry="430" fill="url(#fire)" opacity=".72"/>
+<ellipse cx="1320" cy="510" rx="520" ry="460" fill="url(#ice)" opacity=".75"/>
+<path d="M0 640L165 565l125 34 130-82 145 62 125-28 120 80 125-68 170 78 128-36 167 58v237H0z" fill="#080b10"/>
+<path d="M0 720l185-70 148 41 156-83 176 73 153-45 174 72 172-82 164 58 132-38 160 66v188H0z" fill="#11151c" opacity=".95"/>
+<g opacity=".8"><path d="M145 124l18 44-11 39 33 29-51 3-24 42-14-49-48-13 42-27 1-51z" fill="#ff6a17"/><path d="M1415 125l-15 41 13 36-30 24 46 5 21 39 14-44 44-11-37-26-1-45z" fill="#1e9cff"/></g>
+<!-- Samurai-inspired archetype -->
+<g transform="translate(365 438) rotate(-7)" filter="url(#shadow)">
+  <path d="M-118 52Q-70-28 0-36Q82-25 118 54L82 225H-90z" fill="#241713" stroke="#6d2a13" stroke-width="9"/>
+  <path d="M-77-3Q0-100 77-3L53 35H-53z" fill="#171515" stroke="#d76318" stroke-width="9"/>
+  <path d="M-72-15L-113-57 0-92 113-57 73-12z" fill="#111217" stroke="#e5741c" stroke-width="8"/>
+  <path d="M-46 11h92" stroke="#ff9b2f" stroke-width="8"/>
+  <path d="M-92 66L-225 171" stroke="#1a1412" stroke-width="32" stroke-linecap="round"/>
+  <path d="M91 64L220 156" stroke="#1a1412" stroke-width="30" stroke-linecap="round"/>
+  <path d="M-250 176L152 86" stroke="#f6f6f3" stroke-width="17"/>
+  <path d="M-250 176L152 86" stroke="#ff6b18" stroke-width="6" filter="url(#glow)"/>
+  <path d="M-118 210l-45 150M93 210l52 150" stroke="#11141a" stroke-width="42" stroke-linecap="round"/>
+</g>
+<!-- Viking-inspired archetype -->
+<g transform="translate(1255 430) rotate(7)" filter="url(#shadow)">
+  <path d="M-120 55Q-72-33 0-40Q80-30 119 60L88 233H-93z" fill="#152231" stroke="#245f8f" stroke-width="9"/>
+  <circle cx="0" cy="-2" r="58" fill="#8d745f"/>
+  <path d="M-69-2Q0-92 69-2L47 26H-47z" fill="#17202a" stroke="#63baff" stroke-width="8"/>
+  <path d="M-53 42q53 38 106 0v58q-52 48-106 0z" fill="#4b382d"/>
+  <path d="M-94 67L-223 151" stroke="#17202a" stroke-width="34" stroke-linecap="round"/>
+  <path d="M94 67L222 149" stroke="#17202a" stroke-width="34" stroke-linecap="round"/>
+  <path d="M177 44L310 182" stroke="#77889a" stroke-width="18"/>
+  <path d="M270 133l93-24-27 95-53-8z" fill="url(#steel)" stroke="#8dd7ff" stroke-width="8"/>
+  <path d="M-120 212l-48 150M95 212l48 150" stroke="#101720" stroke-width="45" stroke-linecap="round"/>
+</g>
+<!-- Central knight archetype -->
+<g transform="translate(810 370)" filter="url(#shadow)">
+  <path d="M-157 140Q-120 12 0-10Q125 8 162 142L125 392H-130z" fill="url(#steel)" stroke="#0a0d13" stroke-width="14"/>
+  <path d="M-91-54Q0-166 91-54L64 36H-64z" fill="url(#steel)" stroke="#11161f" stroke-width="12"/>
+  <path d="M-72-12h144v34H-72z" fill="#080a0d"/><path d="M-58 0h116" stroke="#ff9c2d" stroke-width="5" opacity=".7"/>
+  <path d="M-145 169L-320 300" stroke="#27303b" stroke-width="48" stroke-linecap="round"/>
+  <path d="M143 165L302 274" stroke="#27303b" stroke-width="48" stroke-linecap="round"/>
+  <path d="M-18 112L98 265" stroke="#dce5ee" stroke-width="20"/>
+  <path d="M53 203L397 425" stroke="#ecf5ff" stroke-width="28"/>
+  <path d="M53 203L397 425" stroke="#69c8ff" stroke-width="7" filter="url(#glow)"/>
+  <path d="M-130 370l-58 185M122 370l58 185" stroke="#111721" stroke-width="55" stroke-linecap="round"/>
+  <path d="M-120 115Q0 180 122 115" fill="none" stroke="#5d6b7a" stroke-width="18"/>
+</g>
+<!-- energy slashes -->
+<path d="M60 610Q330 470 560 505" fill="none" stroke="#ff7a1a" stroke-width="8" opacity=".75" filter="url(#glow)"/>
+<path d="M1040 515Q1300 435 1540 560" fill="none" stroke="#2aa9ff" stroke-width="8" opacity=".8" filter="url(#glow)"/>
+<g fill="#ff8a28" opacity=".9"><circle cx="170" cy="358" r="6"/><circle cx="245" cy="510" r="4"/><circle cx="515" cy="307" r="5"/><circle cx="645" cy="619" r="4"/></g>
+<g fill="#63c8ff" opacity=".9"><circle cx="1388" cy="336" r="6"/><circle cx="1470" cy="520" r="4"/><circle cx="1104" cy="281" r="5"/><circle cx="1015" cy="603" r="4"/></g>
+<!-- title plate -->
+<g transform="translate(78 72)" filter="url(#shadow)">
+  <text x="0" y="0" dominant-baseline="hanging" font-family="Arial Black,Impact,sans-serif" font-size="58" fill="#f1eee6" letter-spacing="3">FOR HONOR</text>
+  <text x="0" y="92" dominant-baseline="hanging" font-family="Arial Black,Impact,sans-serif" font-size="116" fill="url(#gold)" transform="skewX(-7)">YEAR 10</text>
+  <path d="M2 225h520" stroke="#f0b140" stroke-width="5"/>
+  <text x="6" y="246" dominant-baseline="hanging" font-family="Arial Black,Impact,sans-serif" font-size="42" fill="#fff" transform="skewX(-8)">THE BATTLE CONTINUES</text>
+</g>
+<!-- lower callout -->
+<g transform="translate(1035 687) rotate(-3)" filter="url(#shadow)">
+  <path d="M-48-38H500L450 118H-80z" fill="#040609" opacity=".92" stroke="#1e8fd9" stroke-width="5"/>
+  <text x="0" y="0" dominant-baseline="hanging" font-family="Arial Black,Impact,sans-serif" font-size="48" fill="#fff">WHY IT STILL</text>
+  <text x="0" y="54" dominant-baseline="hanging" font-family="Arial Black,Impact,sans-serif" font-size="58" fill="#35b6ff">REFUSES TO DIE</text>
+</g>
+<rect width="1600" height="900" fill="url(#grain)"/>
+<g font-family="Arial,Helvetica,sans-serif"><text x="82" y="840" fill="#ff8a22" font-weight="800" font-size="28" letter-spacing="5">ROGUEVERSE GAMES</text><text x="82" y="872" fill="#b6c0cb" font-size="18">Original RogueVerse Media editorial artwork • Generic medieval anime archetypes</text></g>
+</svg>
