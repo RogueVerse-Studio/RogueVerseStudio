@@ -29,3 +29,5 @@ belong directly beside the existing `.git` folder.
 
 TikTok: https://www.tiktok.com/@old_man_otaku
 Square Shop: https://rogueversestudio.square.site/
+
+Deployment refresh: August 6, 2026.
