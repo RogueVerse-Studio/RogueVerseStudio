@@ -11,3 +11,16 @@
 @media(max-width:1180px){.culture-directory{grid-template-columns:repeat(2,1fr)}.culture-directory .culture-tech-card{grid-column:1/-1}}
 @media(max-width:980px){.culture-hero-page{grid-template-columns:1fr}.culture-host-art{min-height:420px;order:2}.culture-host-art span{width:220px}.culture-hero-copy{padding:70px 25px 20px}}
 @media(max-width:600px){.culture-directory{grid-template-columns:1fr}.culture-directory article{border-right:0;border-bottom:1px solid rgba(255,255,255,.12)}.culture-directory .culture-tech-card{display:block;min-height:0}.culture-tech-art{width:100%;aspect-ratio:9/16}.culture-tech-art:after{box-shadow:inset 0 -30px 35px rgba(5,8,15,.8)}.culture-card-copy{padding:36px 25px 44px}.culture-hero-copy h1{font-size:20vw}.culture-host-art:before{width:320px;height:320px}.culture-latest h2{font-size:clamp(38px,10vw,48px);overflow-wrap:anywhere}}
+
+/* 2026 section-art upgrade: one optimized atlas supplies cinematic imagery to the four core culture gateways. */
+.culture-directory>article:not(.culture-tech-card){background-repeat:no-repeat;background-size:auto,auto 500%;background-position:center,center 0%;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease}
+.culture-directory>article:not(.culture-tech-card)>*{position:relative;z-index:2}
+.culture-directory>article:not(.culture-tech-card):hover{box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 18px 40px rgba(0,0,0,.22)}
+.culture-directory>#movies{background-image:linear-gradient(90deg,rgba(5,8,15,.98) 0%,rgba(5,8,15,.92) 42%,rgba(5,8,15,.46) 72%,rgba(5,8,15,.18) 100%),url('../assets/2026/our-culture-art-atlas-v1.webp');background-position:center,center 0%}
+.culture-directory>#games{background-image:linear-gradient(90deg,rgba(5,8,15,.98) 0%,rgba(5,8,15,.92) 42%,rgba(5,8,15,.46) 72%,rgba(5,8,15,.18) 100%),url('../assets/2026/our-culture-art-atlas-v1.webp');background-position:center,center 25%}
+.culture-directory>#comics{background-image:linear-gradient(90deg,rgba(5,8,15,.98) 0%,rgba(5,8,15,.92) 42%,rgba(5,8,15,.46) 72%,rgba(5,8,15,.18) 100%),url('../assets/2026/our-culture-art-atlas-v1.webp');background-position:center,center 50%}
+.culture-directory>#geek{background-image:linear-gradient(90deg,rgba(5,8,15,.98) 0%,rgba(5,8,15,.92) 42%,rgba(5,8,15,.46) 72%,rgba(5,8,15,.18) 100%),url('../assets/2026/our-culture-art-atlas-v1.webp');background-position:center,center 75%}
+.culture-directory>article:not(.culture-tech-card) .culture-number{color:rgba(255,255,255,.18);text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.culture-directory>article:not(.culture-tech-card) h2{text-shadow:0 3px 24px rgba(0,0,0,.9)}
+@media(max-width:1180px){.culture-directory>article:not(.culture-tech-card){min-height:430px}}
+@media(max-width:600px){.culture-directory>article:not(.culture-tech-card){min-height:500px;padding:44px 36px 52px;background-size:auto,auto 500%;background-position:center,62% 0%}.culture-directory>#games{background-position:center,62% 25%}.culture-directory>#comics{background-position:center,62% 50%}.culture-directory>#geek{background-position:center,62% 75%}.culture-directory>article:not(.culture-tech-card){background-blend-mode:normal}.culture-directory>article:not(.culture-tech-card) p:not(.eyebrow){max-width:86%;color:#d5dbe5}.culture-directory>article:not(.culture-tech-card) h2{max-width:92%}}
