@@ -31,3 +31,10 @@ TikTok: https://www.tiktok.com/@old_man_otaku
 Square Shop: https://rogueversestudio.square.site/
 
 Deployment refresh: August 6, 2026.
+
+## Approval-first publishing automation
+
+The repository now includes an approval-first article and faceless short-video
+pipeline under `automation/`. See `automation/README.md` for the three-package
+weekly workflow, GitHub Actions setup, and required YouTube/TikTok OAuth
+secrets. Facebook publishing remains disabled until a Page is connected.

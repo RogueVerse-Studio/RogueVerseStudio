@@ -1,0 +1,121 @@
+name: Prepare content package for approval
+
+on:
+  workflow_dispatch:
+    inputs:
+      package_path:
+        description: Repository path to a draft package JSON file
+        required: true
+        default: content-packages/drafts/next-package.json
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: prepare-${{ inputs.package_path }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Validate and build the website package
+        env:
+          PACKAGE_PATH: ${{ inputs.package_path }}
+        shell: bash
+        run: |
+          python - "$PACKAGE_PATH" <<'PY'
+          from pathlib import Path
+          import sys
+          root = Path.cwd().resolve()
+          package = (root / sys.argv[1]).resolve()
+          drafts = (root / "content-packages" / "drafts").resolve()
+          if not package.is_relative_to(drafts) or package.suffix != ".json":
+              raise SystemExit("package_path must be a JSON file under content-packages/drafts")
+          PY
+          python automation/build_package.py \
+            --package "$PACKAGE_PATH" \
+            --site-root . \
+            --output-dir automation/build
+
+      - name: Read package identity
+        id: package
+        shell: bash
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          manifest = json.loads(Path("automation/build/manifest.json").read_text(encoding="utf-8"))
+          print(f"slug={manifest['slug']}")
+          print(f"article_url={manifest['article_url']}")
+          PY
+
+      - name: Set up Node.js for remote video rendering
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install the video renderer
+        working-directory: automation/video
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.16.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Stage package artwork for Remotion
+        shell: bash
+        run: |
+          rm -rf automation/video/public/site
+          cp -R automation/build/video-public/site automation/video/public/site
+
+      - name: Render approval video
+        working-directory: automation/video
+        run: >-
+          pnpm exec remotion render src/index.ts RogueVerseShort
+          "../build/${{ steps.package.outputs.slug }}.mp4"
+          --props="../build/video-props.json"
+          --codec=h264
+          --crf=20
+
+      - name: Upload the approval package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.package.outputs.slug }}-approval
+          path: |
+            automation/build/${{ steps.package.outputs.slug }}.mp4
+            automation/build/manifest.json
+            automation/build/video-props.json
+          retention-days: 14
+
+      - name: Create the approval pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SLUG: ${{ steps.package.outputs.slug }}
+          ARTICLE_URL: ${{ steps.package.outputs.article_url }}
+          RUN_ID: ${{ github.run_id }}
+        shell: bash
+        run: |
+          branch="automation/package-${SLUG}-${RUN_ID}"
+          git config user.name "RogueVerse Content Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -m "Prepare content package: ${SLUG}"
+          git push --set-upstream origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "Approve package: ${SLUG}" \
+            --body "Review the article changes and the workflow artifact video. Merging this pull request is approval to deploy the article and, when social publishing is enabled, distribute the approved video. Article destination: ${ARTICLE_URL}"
