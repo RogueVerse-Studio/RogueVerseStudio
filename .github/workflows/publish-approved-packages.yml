@@ -1,0 +1,90 @@
+name: Publish approved social packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - content-packages/approved/*.json
+  workflow_dispatch:
+    inputs:
+      package_path:
+        description: Approved package to publish manually
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: social-publishing
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: ${{ vars.SOCIAL_PUBLISH_ENABLED == 'true' }}
+    environment: social-production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out approved main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Find approved packages in this change
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          MANUAL_PACKAGE: ${{ inputs.package_path }}
+        shell: bash
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            python automation/list_changed_packages.py --package "$MANUAL_PACKAGE"
+          else
+            python automation/list_changed_packages.py \
+              --before "${{ github.event.before }}" \
+              --after "${{ github.sha }}"
+          fi
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install the video renderer
+        working-directory: automation/video
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.16.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Render and publish each approved package
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+        shell: bash
+        run: |
+          required_secrets=(YOUTUBE_CLIENT_ID YOUTUBE_CLIENT_SECRET YOUTUBE_REFRESH_TOKEN TIKTOK_CLIENT_KEY TIKTOK_CLIENT_SECRET TIKTOK_REFRESH_TOKEN)
+          for secret_name in "${required_secrets[@]}"; do
+            if [ -z "${!secret_name}" ]; then
+              echo "Missing required social-production secret: ${secret_name}" >&2
+              exit 2
+            fi
+          done
+          while IFS= read -r package; do
+            [ -n "$package" ] || continue
+            slug="$(python -c 'import json,sys; print(json.load(open(sys.argv[1], encoding="utf-8"))["slug"])' "$package")"
+            rm -rf automation/build automation/video/public/site
+            python automation/prepare_video.py --package "$package" --site-root . --output-dir automation/build
+            cp -R automation/build/video-public/site automation/video/public/site
+            (cd automation/video && pnpm exec remotion render src/index.ts RogueVerseShort "../build/${slug}.mp4" --props="../build/video-props.json" --codec=h264 --crf=20)
+            python automation/publish_youtube.py --package "$package" --video "automation/build/${slug}.mp4" --publish | tee -a "$GITHUB_STEP_SUMMARY"
+            python automation/publish_tiktok.py --package "$package" --video "automation/build/${slug}.mp4" --publish | tee -a "$GITHUB_STEP_SUMMARY"
+          done < automation/build/changed-packages.txt

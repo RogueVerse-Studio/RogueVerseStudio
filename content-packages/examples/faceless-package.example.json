@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "slug": "example-rogueverse-story",
+  "section": "old-man-otaku",
+  "title": "Example RogueVerse Story",
+  "description": "A safe example showing the fields required for one article and faceless short-video package.",
+  "kicker": "ANIMANGA EXAMPLE • AUGUST 12, 2026",
+  "dek": "This file is a template. Copy it into drafts, replace every example field, and verify every source before preparing it for approval.",
+  "publish_at": "2026-08-12T13:00:00-04:00",
+  "hero": {
+    "src": "assets/optimized/animanga-updates-1440.webp",
+    "alt": "AniManga Updates with Old Man Otaku"
+  },
+  "article": {
+    "kind": "reported",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "html": "Open with the verified news and explain why it matters to RogueVerse readers."
+      },
+      {
+        "type": "heading",
+        "html": "What is confirmed"
+      },
+      {
+        "type": "paragraph",
+        "html": "Separate confirmed facts from interpretation and clearly label anything that remains uncertain."
+      },
+      {
+        "type": "blockquote",
+        "html": "RogueVerse take: context matters more than hype."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Replace with a primary reporting source",
+        "url": "https://example.com/source"
+      }
+    ]
+  },
+  "video": {
+    "duration_seconds": 45,
+    "scenes": [
+      {
+        "headline": "The hook",
+        "body": "State the news in one clear sentence.",
+        "image": "assets/optimized/animanga-updates-1440.webp"
+      },
+      {
+        "headline": "What is confirmed",
+        "body": "Give viewers the strongest verified detail.",
+        "image": "assets/optimized/animanga-updates-1440.webp"
+      },
+      {
+        "headline": "Why it matters",
+        "body": "End with the RogueVerse perspective and direct viewers to the article.",
+        "image": "assets/optimized/animanga-updates-1440.webp"
+      }
+    ]
+  },
+  "social": {
+    "youtube": {
+      "title": "Example RogueVerse Story #Shorts",
+      "description": "Read the complete article at RogueVerseMedia.com. #anime #manga #shorts",
+      "tags": ["RogueVerse", "anime", "manga"],
+      "category_id": "24",
+      "privacy_status": "private",
+      "made_for_kids": false,
+      "contains_synthetic_media": true
+    },
+    "tiktok": {
+      "caption": "The complete breakdown is at RogueVerseMedia.com. #anime #manga #rogueverse"
+    }
+  }
+}

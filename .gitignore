@@ -1,0 +1,8 @@
+automation/build/
+automation/video/node_modules/
+automation/video/public/site/
+automation/video/out/
+*.mp4
+.env
+.env.*
+!.env.example
