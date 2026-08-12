@@ -249,3 +249,31 @@ if (feed && shell) {
       badge.hidden = true;
     });
 })();
+
+// Approved cinematic header for the under-the-radar romance feature.
+(() => {
+  const targetPath = "/old-man-otaku/under-the-radar-romance-anime/";
+  if (location.pathname !== targetPath) return;
+
+  const hero = document.querySelector(".article-lead-art img");
+  if (!hero) return;
+
+  Promise.all([0, 1, 2, 3].map((i) =>
+    fetch(`assets/header-${i}.txt`, { cache: "force-cache" }).then((response) => {
+      if (!response.ok) throw new Error(`Romance header chunk ${i} failed: ${response.status}`);
+      return response.text();
+    })
+  )).then((parts) => {
+    hero.src = `data:image/webp;base64,${parts.join("")}`;
+    hero.removeAttribute("srcset");
+    hero.width = 640;
+    hero.height = 427;
+    hero.alt = "10 Under-the-Radar Romance Anime — The Love Stories You Might Have Missed";
+    hero.style.width = "100%";
+    hero.style.height = "auto";
+    hero.style.objectFit = "cover";
+    hero.style.borderRadius = "16px";
+  }).catch((error) => {
+    console.warn("RogueVerse romance header fallback retained.", error);
+  });
+})();
