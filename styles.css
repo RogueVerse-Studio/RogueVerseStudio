@@ -172,3 +172,36 @@ footer{padding:45px clamp(22px,6vw,92px);display:flex;align-items:center;justify
   .division-hero{padding:32px 20px;background-size:cover,contain}
   .division-hero--wide{background-size:cover,contain}
 }
+
+/* Mobile article polish: compact chrome, cinematic art and calmer reading rhythm. */
+.article-page{background:#050913}
+.article-page .article-header{box-shadow:0 8px 28px rgba(0,0,0,.22)}
+.article-shell blockquote{margin:34px 0;padding:20px 22px;background:#0b1b34;color:#fff;border-left:5px solid var(--orange);font-size:clamp(19px,3vw,24px);line-height:1.55}
+.article-sources{margin:38px 0;padding:24px 26px;background:rgba(255,255,255,.62);border-left:5px solid var(--orange);box-shadow:0 10px 30px rgba(14,21,38,.06)}
+.article-sources h2{margin-top:0;font-size:clamp(24px,4vw,34px)}
+.article-sources p,.article-sources li{font-size:15px;line-height:1.65}
+@media(max-width:700px){
+  .article-page .site-header{height:64px;padding:0 14px;border-bottom-width:2px}
+  .article-page .brand-image img{width:34px;height:34px}
+  .article-page .brand{gap:8px}
+  .article-page .brand b{font-size:15px}
+  .article-page .brand small{margin-top:5px;font-size:8px;letter-spacing:.22em}
+  .article-page .article-header .button{padding:9px 12px;font-size:12px;border-radius:999px;white-space:nowrap}
+  .article-page main{background:linear-gradient(180deg,#07111f 0,#0b1930 240px,var(--cream) 240px)}
+  .article-shell{width:100%;max-width:none;padding:34px 20px 70px;border-radius:0;box-shadow:none}
+  .article-shell .kicker{display:inline-block;margin:0 0 14px;padding:7px 9px;border-radius:999px;background:#101a2c;color:var(--orange);font-size:10px;line-height:1.2;letter-spacing:.08em}
+  .article-shell h1{font-size:clamp(36px,11vw,54px);line-height:.98;letter-spacing:-.02em}
+  .article-shell .dek{margin-top:18px;font-size:19px;line-height:1.5}
+  .article-shell .article-byline{font-size:13px;line-height:1.45;color:#606773}
+  .article-shell p,.article-shell li{font-size:17px;line-height:1.72}
+  .article-shell h2{margin-top:46px;font-size:clamp(28px,8vw,39px);line-height:1.02}
+  .article-lead-art{width:calc(100% + 40px);max-width:none;margin:30px -20px 32px}
+  .article-lead-art img{width:100%;border-radius:0;box-shadow:0 16px 44px rgba(0,0,0,.2)}
+  .article-lead-art figcaption{margin:10px 20px 0;font-size:11px;line-height:1.45;color:#6f7580}
+  .article-sources{margin:44px 0;padding:18px 18px;background:#fffaf2;border-left-width:4px;box-shadow:0 8px 24px rgba(14,21,38,.06)}
+  .article-sources h2{font-size:23px;line-height:1.05}
+  .article-sources p,.article-sources li{font-size:14px;line-height:1.58}
+  .article-sources + .article-sources{margin-top:22px}
+  .article-shell blockquote{margin:34px -4px;padding:18px 18px;font-size:19px}
+  .article-page footer{padding:30px 20px}
+}
