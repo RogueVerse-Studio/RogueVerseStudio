@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "slug": "kaze-us-manga-imprint",
+  "section": "old-man-otaku",
+  "title": "HarperCollins Is Launching Kazé in the U.S., and Manga Publishing Just Got a New Heavyweight",
+  "description": "HarperCollins is launching Kazé as a dedicated U.S. manga imprint, with seven licenses due to be revealed later in 2026.",
+  "kicker": "MANGA INDUSTRY • AUGUST 17, 2026",
+  "publish_at": "2026-08-17T09:00:00-04:00",
+  "hero": {
+    "src": "assets/optimized/animanga-updates-1440.webp",
+    "alt": "AniManga Updates with Old Man Otaku"
+  },
+  "research_notes": [
+    "ICv2 reports HarperCollins is launching Kazé as a U.S. manga imprint and plans to reveal seven initial licenses later in 2026.",
+    "The imprint is reported to span children's through adult readership.",
+    "Do not frame this as HarperCollins entering manga for the first time. HarperCollins already has U.S. manga activity, including HarperAlley manga and adult graphic novels.",
+    "HarperCollins acquired Crunchyroll's manga publishing businesses in France and Germany in 2025. Those operations became Pegasus Manga companies.",
+    "The historic KAZÉ brand returned for new European releases beginning in April 2026.",
+    "HarperCollins previously described the revived KAZÉ strategy as international and multinational in ambition."
+  ],
+  "sources": [
+    {"label":"ICv2 — HarperCollins to launch new U.S. manga imprint","url":"https://icv2.com/articles/news/view/63131/harpercollins-launch-new-u-s-manga-imprint"},
+    {"label":"HarperCollins Japan / Pegasus Manga — KAZÉ revival and 2026 lineup","url":"https://prtimes.jp/main/html/rd/p/000000084.000004274.html"},
+    {"label":"Pegasus Manga Germany — company history","url":"https://vertrieb.kaze-online.de/ueber-uns-2/"},
+    {"label":"Publishers Weekly — HarperCollins U.S. Trade restructuring","url":"https://www.publishersweekly.com/pw/print/20260608/100573-harpercollins-us-trade-unveils-new-structure.html"}
+  ],
+  "video": {
+    "duration_seconds": 45,
+    "scenes": [
+      {"headline":"A New Manga Heavyweight?","body":"HarperCollins is launching Kazé as a dedicated U.S. manga imprint.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"Seven Licenses Incoming","body":"The first seven titles are expected to be revealed later in 2026, covering readers from kids through adults.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"Kazé Isn't Actually New","body":"The brand has decades of European manga history and was revived by HarperCollins after its 2025 Crunchyroll publishing acquisition.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"This Is Bigger Than 7 Books","body":"HarperCollins brings global trade distribution, production infrastructure and retailer relationships to a dedicated manga line.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"The Real Question","body":"Will Kazé chase blockbuster licenses, underserved manga, children's titles, or all of the above? The first seven books will tell us.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"Manga Has Another Player","body":"This isn't HarperCollins discovering manga. It's HarperCollins formalizing a much bigger U.S. manga strategy. Full story at RogueVerseMedia.com.","image":"assets/optimized/animanga-updates-1440.webp"}
+    ]
+  },
+  "social": {
+    "youtube": {
+      "title": "HarperCollins Is Launching a New U.S. Manga Imprint #Shorts",
+      "description": "HarperCollins is launching Kazé as a dedicated U.S. manga imprint, with seven licenses set to be revealed later in 2026. The bigger story is the infrastructure behind it: Kazé has European manga history and now sits inside one of the world's largest trade publishers. Full breakdown at RogueVerseMedia.com. #manga #MangaNews #Kaze #HarperCollins #OldManOtaku #RogueVerse",
+      "tags": ["manga", "manga news", "Kaze", "Kazé", "HarperCollins", "anime manga", "Old Man Otaku", "RogueVerse"],
+      "category_id": "24",
+      "privacy_status": "private",
+      "made_for_kids": false,
+      "contains_synthetic_media": true
+    },
+    "tiktok": {
+      "caption": "Manga publishing just got another heavyweight. HarperCollins is launching Kazé as a dedicated U.S. manga imprint, with seven licenses expected to be revealed later in 2026. Kazé isn't a brand invented yesterday either: it has decades of European history and returned under HarperCollins after the company acquired Crunchyroll's French and German manga publishing businesses. The big question now is what those first seven licenses are. Full breakdown at RogueVerseMedia.com. #Manga #MangaNews #Kaze #HarperCollins #OldManOtaku #RogueVerse"
+    }
+  }
+}
