@@ -94,3 +94,15 @@
 .section-art-hero--right .section-art-hero__shade{background:linear-gradient(270deg,rgba(2,4,8,.91),rgba(2,4,8,.42) 48%,rgba(2,4,8,.08)),linear-gradient(0deg,rgba(2,4,8,.96),transparent 58%)}
 .section-art-hero--right .section-art-hero__copy>p:last-child{margin-left:auto}
 @media(max-width:680px){.section-art-hero,.section-art-hero--right{min-height:740px;align-items:flex-end;justify-content:flex-start;text-align:left}.section-art-hero__art{object-position:center top}.section-art-hero__shade,.section-art-hero--right .section-art-hero__shade{background:linear-gradient(0deg,rgba(2,4,8,.98),rgba(2,4,8,.72) 30%,rgba(2,4,8,.08) 72%)}.section-art-hero__copy{padding:46px 20px}.section-art-hero__copy h1{font-size:clamp(48px,17vw,78px)}.section-art-hero--right .section-art-hero__copy>p:last-child{margin-left:0}}
+
+/* Legacy article cleanup: keep page-local styles from overpowering the mobile reading system. */
+@media(max-width:760px){
+  .article-page .article-hero{width:calc(100% + 32px)!important;max-width:none!important;margin:22px -16px 24px!important;border-radius:0!important;box-shadow:0 14px 34px rgba(0,0,0,.2)!important}
+  .article-page .rights-note,.article-page .scope-note,.article-page .source-note{margin:22px 0!important;padding:14px 16px!important;font-size:.84rem!important;line-height:1.55!important;border-left-width:4px!important;border-radius:0 8px 8px 0!important;box-shadow:none!important}
+  .article-page .scope-note{background:#07152a!important;color:#fff!important}
+  .article-page .rights-note{background:#f7f3ec!important;color:#222!important}
+  .article-page .article-shell blockquote{margin:24px 0!important;padding:18px 18px!important;font-size:1rem!important;line-height:1.6!important;border-radius:0 8px 8px 0!important}
+  .article-page .spectrum{grid-template-columns:1fr!important;gap:8px!important;margin:24px 0!important}
+  .article-page .spectrum div{padding:14px!important}
+  .article-page .verdict{margin:28px 0!important;padding:20px!important;border-radius:12px!important}
+}
