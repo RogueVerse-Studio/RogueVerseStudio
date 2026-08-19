@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "campaign": "RogueVerse: Just Imagine",
+  "project": "For Honor: The Anime",
+  "installment": "Act I — The Fracture",
+  "status": "prototype",
+  "approval": {
+    "story": "approved-for-prototype",
+    "visuals": "pending",
+    "publishing": "pending"
+  },
+  "article": {
+    "title": "For Honor Deserves an Anime: Here's the Series RogueVerse Would Make",
+    "section": "games",
+    "angle": "A serious war-fantasy anime adaptation concept centered on inherited hatred, manipulated conflict, faction identity, and uneasy cooperation."
+  },
+  "rights_notice": "Unofficial RogueVerse fan concept inspired by Ubisoft's For Honor. For Honor and related names, characters, trademarks, and intellectual property belong to Ubisoft and their respective rights holders.",
+  "visual_lock": {
+    "style": "RogueVerse Simple Cinematic Anime",
+    "format": "1080x1920",
+    "knights": ["steel", "black", "muted gold"],
+    "vikings": ["charcoal", "leather", "deep crimson"],
+    "samurai": ["black", "dark teal", "weathered steel"],
+    "harbinger": ["black", "violet", "cold silver"],
+    "host": ["orange", "blue", "black", "white"]
+  },
+  "beats": [
+    "The Shattering fractured the old world and separated civilizations.",
+    "Ashfeld, Heathmoor, and the Myre grew into distinct societies locked in inherited conflict.",
+    "Warden escorts desperately needed supplies through disputed territory.",
+    "Raider attacks because Heathmoor needs the same supplies.",
+    "Warden and Raider duel while their armies clash.",
+    "The battlefield splits open during an earthquake.",
+    "Ancient ruins are exposed beneath the battlefield.",
+    "A mysterious relic fragment is found inside.",
+    "Masked warriors appear, seize the fragment, and escape.",
+    "Warden and Raider realize their battle may have been engineered."
+  ],
+  "carousel": {
+    "platforms": ["tiktok", "instagram"],
+    "cards": [
+      {"number": 1, "headline": "FOR HONOR: THE ANIME", "body": "ACT I — THE FRACTURE. Nobody remembers who started the war."},
+      {"number": 2, "headline": "THE WORLD BROKE FIRST", "body": "The Shattering tore continents apart. The survivors rebuilt, but not together."},
+      {"number": 3, "headline": "THREE WORLDS ROSE", "body": "Ashfeld. Heathmoor. The Myre. Order, freedom, and tradition hardened into rival civilizations."},
+      {"number": 4, "headline": "AND THEN THEY FOUGHT", "body": "Land. Food. Borders. Old grudges. Eventually, war became inheritance."},
+      {"number": 5, "headline": "WARDEN", "body": "A Knight commander escorts supplies through disputed territory, believing Ashfeld's army protects civilization."},
+      {"number": 6, "headline": "RAIDER", "body": "Heathmoor is starving. Raider needs the same supplies. Two armies. One shipment. No clean answer."},
+      {"number": 7, "headline": "KNIGHT VS. VIKING", "body": "Sword against axe. Discipline against overwhelming force. Neither warrior intends to move."},
+      {"number": 8, "headline": "THEN THE EARTH MOVES", "body": "The battlefield splits open beneath both armies."},
+      {"number": 9, "headline": "BENEATH THE WAR", "body": "An ancient structure appears, older than either civilization and still somehow functioning."},
+      {"number": 10, "headline": "THE RELIC", "body": "A fragment of strange metal waits inside. Neither faction recognizes it. Someone else does."},
+      {"number": 11, "headline": "THEY WERE WAITING", "body": "Masked warriors emerge, ignore both armies, seize the relic, and disappear."},
+      {"number": 12, "headline": "SOMEONE WANTED THIS BATTLE", "body": "NEXT: ACT II — THE CONVERGENCE"}
+    ]
+  },
+  "vertical_video": {
+    "duration_seconds": 60,
+    "scenes": [
+      {"headline": "The world broke first", "body": "The Shattering divided civilization into rival powers."},
+      {"headline": "Three worlds rose", "body": "Knights of Ashfeld, Vikings of Heathmoor, and Samurai of the Myre inherited generations of war."},
+      {"headline": "One shipment", "body": "Warden escorts supplies that Raider's starving people also need."},
+      {"headline": "Knight vs. Viking", "body": "Their duel becomes the center of a battle neither side can afford to lose."},
+      {"headline": "The earth opens", "body": "An earthquake exposes ancient ruins directly beneath the battlefield."},
+      {"headline": "The relic", "body": "Inside is a mysterious fragment that neither faction recognizes."},
+      {"headline": "They were waiting", "body": "Masked warriors seize the relic and escape without choosing a side."},
+      {"headline": "The real question", "body": "Someone wanted Warden and Raider to fight here. Act II: The Convergence."}
+    ]
+  },
+  "youtube_feature": {
+    "working_title": "For Honor Should Be an Anime | The Adaptation We'd Make",
+    "target_minutes": 12,
+    "chapters": [
+      "The pitch",
+      "The Shattering and the three factions",
+      "Warden and Raider",
+      "The hidden conspiracy",
+      "Why anime combat grammar fits For Honor",
+      "The Harbinger and the relic",
+      "The alliance and betrayal",
+      "Why the story is really about inherited hatred",
+      "Season Two tease"
+    ]
+  }
+}
