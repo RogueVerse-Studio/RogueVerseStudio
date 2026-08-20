@@ -1,8 +1,8 @@
-/* RogueVerse Studio visual publishing standard: site-wide image fallback layer. */
+/* RogueVerse Studio visual publishing standard: imagery is structural, not optional. */
 :root{--rv-fallback-art:url('assets/2026/editorial-fallback.svg')}
 
 /* Clickable editorial cards should never render as text-only slabs. */
-.section-card:not(.section-card--image),
+.section-card,
 .story-list a,
 .post-placeholder,
 .feature-card{
@@ -10,7 +10,7 @@
   isolation:isolate;
   overflow:hidden;
 }
-.section-card:not(.section-card--image)::before,
+.section-card::before,
 .story-list a::before,
 .post-placeholder::before,
 .feature-card::before{
@@ -18,13 +18,13 @@
   position:absolute;
   inset:0;
   z-index:-2;
-  background-image:var(--rv-card-art,var(--rv-fallback-art));
+  background-image:var(--card-image,var(--rv-card-art,var(--rv-fallback-art)));
   background-size:cover;
   background-position:center;
-  opacity:.34;
-  transition:transform .35s ease,opacity .35s ease;
+  opacity:.42;
+  transition:transform .35s ease,opacity .35s ease,filter .35s ease;
 }
-.section-card:not(.section-card--image)::after,
+.section-card::after,
 .story-list a::after,
 .post-placeholder::after,
 .feature-card::after{
@@ -32,15 +32,17 @@
   position:absolute;
   inset:0;
   z-index:-1;
-  background:linear-gradient(0deg,rgba(4,7,12,.98) 4%,rgba(4,7,12,.72) 52%,rgba(4,7,12,.28)),linear-gradient(90deg,rgba(4,7,12,.84),transparent 72%);
+  background:linear-gradient(0deg,rgba(4,7,12,.98) 4%,rgba(4,7,12,.72) 52%,rgba(4,7,12,.24)),linear-gradient(90deg,rgba(4,7,12,.84),transparent 72%);
   pointer-events:none;
 }
-.section-card:not(.section-card--image):hover::before,.story-list a:hover::before,.feature-card:hover::before{transform:scale(1.035);opacity:.48}
+.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before{transform:scale(1.035);opacity:.58;filter:saturate(1.08)}
 
-/* AniManga cards use the Old Man Otaku/AniManga visual language as their fallback. */
-.canon-body .section-card:not(.section-card--image){--rv-card-art:url('assets/optimized/animanga-updates-1440.webp')}
+/* Auto-generated article art uses a dedicated mobile composition instead of a hard crop. */
+.rv-auto-article-art{width:min(100%,980px);margin:38px auto 46px;overflow:hidden;background:#05080f;border:1px solid rgba(10,16,32,.14);box-shadow:0 22px 55px rgba(0,0,0,.22)}
+.rv-auto-article-art picture{display:block;width:100%}
+.rv-auto-article-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center}
 
-/* If an article template has no real lead image yet, create a visible editorial header image automatically. */
+/* If an older article template somehow has no lead image at all, keep a visible safety net. */
 .article-page .article-shell:not(:has(.article-lead-art))::before{
   content:"";
   display:block;
@@ -54,7 +56,7 @@
   box-shadow:0 22px 55px rgba(0,0,0,.22);
 }
 
-/* Major text-only category sections get a visual field behind them. */
+/* Major text-only category sections still receive a visual field until a dedicated illustration is installed. */
 .category:not(:has(img)){
   position:relative;
   isolation:isolate;
@@ -75,25 +77,30 @@
   background-image:var(--rv-section-art,var(--rv-fallback-art));
   background-size:cover;
   background-position:center;
-  opacity:.32;
+  opacity:.38;
 }
 .category:not(:has(img))::after{
   content:"";
   position:absolute;
   inset:0;
   z-index:-1;
-  background:linear-gradient(0deg,rgba(4,7,12,.98),rgba(4,7,12,.44) 72%);
+  background:linear-gradient(0deg,rgba(4,7,12,.98),rgba(4,7,12,.40) 72%);
 }
 .category:not(:has(img)) p{max-width:760px;color:#d4dae4}
 
-/* Section-specific fallback identities. */
+/* Section-specific safety-net identities. Dedicated page artwork should replace these whenever available. */
+.canon-body .section-card:not(.section-card--image){--rv-card-art:url('assets/optimized/animanga-updates-1440.webp')}
 body:has(a[href*="/mythra/"]) .mythra-panel{--rv-section-art:url('assets/optimized/mythra-hero-1440.webp')}
 body:has(.culture-directory) .story-list a{--rv-card-art:url('assets/2026/our-culture-hero-desktop-v1.png')}
 body:has(.wellness-grid) .story-list a{--rv-card-art:url('assets/2026/community-hero-desktop-v1.png')}
 .future-page .story-list a,.future-page .category{--rv-card-art:url('assets/2026/future-hero-desktop-v1.png');--rv-section-art:url('assets/2026/future-hero-desktop-v1.png')}
 
 @media(max-width:720px){
-  .section-card:not(.section-card--image)::before,.story-list a::before,.feature-card::before{background-position:center top}
-  .article-page .article-shell:not(:has(.article-lead-art))::before{aspect-ratio:4/5;background-position:center top}
+  .section-card::before,.story-list a::before,.feature-card::before{background-position:center top}
+  .rv-auto-article-art{margin:26px -2px 38px;width:calc(100% + 4px)}
+  .rv-auto-article-art img{aspect-ratio:3/4;object-position:center top}
+  .article-page .article-shell:not(:has(.article-lead-art))::before{aspect-ratio:3/4;background-position:center top}
   .category:not(:has(img)){min-height:380px;padding:36px 24px}
 }
+
+@media(prefers-reduced-motion:reduce){.section-card::before,.story-list a::before,.feature-card::before{transition:none}.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before{transform:none}}
