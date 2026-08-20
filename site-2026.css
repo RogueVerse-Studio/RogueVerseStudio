@@ -109,12 +109,23 @@ body:has(.culture-directory) .story-list a{--rv-card-art:url('assets/2026/our-cu
 body:has(.wellness-grid) .story-list a{--rv-card-art:url('assets/2026/community-hero-desktop-v1.png')}
 .future-page .story-list a,.future-page .category{--rv-card-art:url('assets/2026/future-hero-desktop-v1.png');--rv-section-art:url('assets/2026/future-hero-desktop-v1.png')}
 
+/* Legal/policy pages were the final major text-only landing pages in the audit. */
+.legal-art-hero{position:relative;min-height:clamp(360px,42vw,590px);display:flex;align-items:flex-end;overflow:hidden;background:#05080d;border-bottom:1px solid rgba(255,255,255,.12);isolation:isolate}
+.legal-art-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.86) contrast(1.04)}
+.legal-art-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,4,8,.94),rgba(2,4,8,.52) 52%,rgba(2,4,8,.26)),linear-gradient(0deg,rgba(2,4,8,.96),transparent 62%)}
+.legal-art-hero__copy{position:relative;z-index:2;max-width:900px;padding:clamp(42px,7vw,92px) clamp(22px,6vw,92px)}
+.legal-art-hero__copy h1{margin:.12em 0 .16em;font:700 clamp(48px,7vw,98px)/.9 Russo One,sans-serif;text-transform:uppercase;color:#fff;text-shadow:0 5px 28px #000}
+.legal-art-hero__copy p:not(.eyebrow){max-width:690px;color:#d8dfe9;font-size:clamp(16px,1.4vw,20px);line-height:1.65}
+.legal-art-hero--privacy>img{object-position:18% 70%}
+.legal-art-hero--terms>img{object-position:82% 70%}
+
 @media(max-width:720px){
   .section-card::before,.story-list a::before,.feature-card::before,.story-stack a::before{background-position:center top}
   .rv-auto-article-art{margin:26px -2px 38px;width:calc(100% + 4px)}
   .rv-auto-article-art img{aspect-ratio:3/4;object-position:center top}
   .article-page .article-shell:not(:has(.article-lead-art))::before{aspect-ratio:3/4;background-position:center top}
   .category:not(:has(img)){min-height:380px;padding:36px 24px}
+  .legal-art-hero{min-height:560px}.legal-art-hero>img{object-position:center}.legal-art-hero__copy{padding:44px 22px}
 }
 
 @media(prefers-reduced-motion:reduce){.section-card::before,.story-list a::before,.feature-card::before,.story-stack a::before{transition:none}.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before,.story-stack a:hover::before{transform:none}}
