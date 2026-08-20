@@ -13,7 +13,7 @@ major_pages_without_visual_hero = []
 placeholder_refs = []
 broken_internal_links = []
 
-visual_hero_markers = ('section-art-hero', 'art-hero', 'rv-hero', 'omo-hero', 'culture-hero', 'wellness-card')
+visual_hero_markers = ('section-art-hero', 'art-hero', 'rv-hero', 'omo-hero', 'culture-hero', 'wellness-card', 'visual-hero', 'legal-art-hero')
 
 
 def exists_from(page, value):
