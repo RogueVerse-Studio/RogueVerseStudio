@@ -1,0 +1,34 @@
+name: Check article discovery
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "old-man-otaku/**/index.html"
+      - "news/**/index.html"
+      - "community/**/index.html"
+      - "feed.xml"
+      - "sitemap.xml"
+      - "automation/check_discovery.py"
+
+permissions:
+  contents: read
+
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Validate feed and sitemap coverage
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python automation/check_discovery.py --base "$BASE_SHA" --head HEAD --site-root .
