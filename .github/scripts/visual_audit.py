@@ -11,7 +11,8 @@ missing_listing_art = []
 missing_image_files = []
 major_pages_without_visual_hero = []
 placeholder_refs = []
-temporary_generated_art = []
+temporary_article_leads = []
+temporary_listing_pages = []
 broken_internal_links = []
 
 visual_hero_markers = ('section-art-hero', 'art-hero', 'rv-hero', 'omo-hero', 'culture-hero', 'wellness-card', 'visual-hero', 'legal-art-hero')
@@ -30,19 +31,23 @@ def exists_from(page, value):
 for page in html_files:
     text = page.read_text(encoding='utf-8')
     rel = page.as_posix()
+    is_article = 'article-shell' in text
 
-    if 'article-shell' in text:
+    if is_article:
         article_pages.append(rel)
         if 'article-lead-art' not in text:
             missing_article_art.append(rel)
+        else:
+            lead = re.search(r'<figure\s+class=(["\'])[^"\']*article-lead-art[^"\']*\1[^>]*>.*?</figure>', text, flags=re.I | re.S)
+            if lead and any(marker in lead.group(0) for marker in temporary_art_markers):
+                temporary_article_leads.append(rel)
+    elif any(marker in text for marker in temporary_art_markers):
+        temporary_listing_pages.append(rel)
 
     if 'under-construction' in text.lower():
         placeholder_refs.append(rel)
 
-    if any(marker in text for marker in temporary_art_markers):
-        temporary_generated_art.append(rel)
-
-    if page.name == 'index.html' and len(page.parent.parts) <= 2 and 'article-shell' not in text:
+    if page.name == 'index.html' and len(page.parent.parts) <= 2 and not is_article:
         if not any(marker in text for marker in visual_hero_markers):
             major_pages_without_visual_hero.append(rel)
 
@@ -88,22 +93,24 @@ report = [
     f'- HTML pages scanned: **{len(html_files)}**',
     f'- Article pages detected: **{len(article_pages)}**',
     f'- Article pages missing lead art: **{len(missing_article_art)}**',
+    f'- Article pages still using temporary/generated lead art: **{len(set(temporary_article_leads))}**',
+    f'- Listing pages still referencing temporary/generated art: **{len(set(temporary_listing_pages))}**',
     f'- Listing cards missing visual assignment: **{len(missing_listing_art)}**',
     f'- Missing local image files: **{len(missing_image_files)}**',
     f'- Major landing pages without visual hero: **{len(major_pages_without_visual_hero)}**',
     f'- Pages still referencing under-construction imagery/text: **{len(placeholder_refs)}**',
-    f'- Pages still using temporary/generated visual assets: **{len(set(temporary_generated_art))}**',
     f'- Broken internal links: **{len(broken_internal_links)}**',
     '',
 ]
 
 sections = [
     ('Articles missing lead art', missing_article_art),
+    ('Temporary/generated article leads needing finished-art review', temporary_article_leads),
+    ('Listing pages referencing temporary/generated art', temporary_listing_pages),
     ('Listing cards missing art', missing_listing_art),
     ('Missing local image files', missing_image_files),
     ('Major pages without visual hero', major_pages_without_visual_hero),
     ('Under-construction references', placeholder_refs),
-    ('Temporary/generated art still needing finished-art review', temporary_generated_art),
     ('Broken internal links', broken_internal_links),
 ]
 for title, items in sections:
@@ -115,4 +122,4 @@ for title, items in sections:
     report.append('')
 
 Path('visual-audit.md').write_text('\n'.join(report), encoding='utf-8')
-print('\n'.join(report[:13]))
+print('\n'.join(report[:15]))
