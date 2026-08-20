@@ -3,16 +3,16 @@
 .culture-gateway__heading h2{margin:.12em 0 .2em;font:700 clamp(42px,5.5vw,82px)/.92 Russo One,sans-serif;text-transform:uppercase;letter-spacing:-.03em}
 .culture-gateway__heading>p:last-child{max-width:760px;color:#aeb8c7;font-size:clamp(16px,1.5vw,20px);line-height:1.7}
 .culture-directory{max-width:1600px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.culture-directory article{isolation:isolate;position:relative;min-height:clamp(470px,38vw,610px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:clamp(28px,3vw,46px);background:#080b12 center/cover no-repeat;border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 55px rgba(0,0,0,.24);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.culture-directory article::before{content:"";position:absolute;inset:0;z-index:-2;background-image:inherit;background-position:inherit;background-size:inherit;background-repeat:no-repeat;transform:scale(1.001);transition:transform .42s ease,filter .42s ease}
+.culture-directory article{isolation:isolate;position:relative;min-height:clamp(470px,38vw,610px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:clamp(28px,3vw,46px);background:#080b12;border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 55px rgba(0,0,0,.24);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.culture-directory article::before{content:"";position:absolute;inset:0;z-index:-2;background-color:#080b12;background-image:var(--culture-image);background-position:var(--culture-position,center);background-size:var(--culture-size,cover);background-repeat:no-repeat;transform:scale(1.001);transition:transform .42s ease,filter .42s ease}
 .culture-directory article::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(3,6,11,.08) 0%,rgba(3,6,11,.18) 30%,rgba(3,6,11,.86) 72%,rgba(3,6,11,.98) 100%),linear-gradient(90deg,rgba(3,6,11,.82) 0%,rgba(3,6,11,.3) 58%,rgba(3,6,11,.06) 100%)}
 .culture-directory article:hover{transform:translateY(-5px);border-color:rgba(255,106,0,.62);box-shadow:0 26px 70px rgba(0,0,0,.38),0 0 0 1px rgba(22,135,255,.08)}
 .culture-directory article:hover::before{transform:scale(1.035);filter:saturate(1.08) contrast(1.02)}
-.culture-directory>#movies{background-image:url('../assets/2026/movies-hero-desktop-v1.png');background-position:58% center}
-.culture-directory>#games{background-image:url('../assets/2026/games-hero-desktop-v1.png');background-position:60% center}
-.culture-directory>#comics{background-image:url('../assets/2026/our-culture-art-atlas-v1.webp');background-size:100% 500%;background-position:center 50%}
-.culture-directory>#geek{background-image:url('../assets/2026/our-culture-art-atlas-v1.webp');background-size:100% 500%;background-position:center 75%}
-.culture-directory>#tech{grid-column:1/-1;min-height:clamp(430px,30vw,540px);background-image:url('../assets/2026/tech.png');background-position:72% 38%}
+.culture-directory>#movies{--culture-image:url('../assets/2026/movies-hero-desktop-v1.png');--culture-position:58% center}
+.culture-directory>#games{--culture-image:url('../assets/2026/games-hero-desktop-v1.png');--culture-position:60% center}
+.culture-directory>#comics{--culture-image:url('../assets/2026/our-culture-art-atlas-v1.webp');--culture-size:100% 500%;--culture-position:center 50%}
+.culture-directory>#geek{--culture-image:url('../assets/2026/our-culture-art-atlas-v1.webp');--culture-size:100% 500%;--culture-position:center 75%}
+.culture-directory>#tech{grid-column:1/-1;min-height:clamp(430px,30vw,540px);--culture-image:url('../assets/2026/tech.png');--culture-position:72% 38%}
 .culture-directory>#tech::after{background:linear-gradient(90deg,rgba(3,6,11,.96) 0%,rgba(3,6,11,.76) 34%,rgba(3,6,11,.24) 68%,rgba(3,6,11,.12) 100%),linear-gradient(0deg,rgba(3,6,11,.82),transparent 62%)}
 .culture-number{font:700 clamp(48px,5vw,72px)/.9 Orbitron,sans-serif;color:rgba(255,255,255,.18);text-shadow:0 2px 20px rgba(0,0,0,.7);letter-spacing:-.06em}
 .culture-directory .eyebrow{margin-top:12px;color:#ff781e;letter-spacing:.14em}
@@ -26,7 +26,7 @@
   .culture-directory{grid-template-columns:1fr}
   .culture-directory>#tech{grid-column:auto}
   .culture-directory article,.culture-directory>#tech{min-height:560px}
-  .culture-directory>#tech{background-position:66% center}
+  .culture-directory>#tech{--culture-position:66% center}
 }
 @media(max-width:600px){
   .culture-gateway{padding:50px 14px 74px}
@@ -35,11 +35,11 @@
   .culture-directory{gap:12px}
   .culture-directory article,.culture-directory>#tech{min-height:590px;padding:30px 24px 34px}
   .culture-directory article::after,.culture-directory>#tech::after{background:linear-gradient(180deg,rgba(3,6,11,.04) 0%,rgba(3,6,11,.24) 42%,rgba(3,6,11,.94) 74%,rgba(3,6,11,.99) 100%)}
-  .culture-directory>#movies{background-image:url('../assets/2026/movies-hero-mobile-v1.png');background-position:center 22%}
-  .culture-directory>#games{background-image:url('../assets/2026/games-hero-mobile-v1.png');background-position:center 22%}
-  .culture-directory>#comics{background-size:auto 500%;background-position:54% 50%}
-  .culture-directory>#geek{background-size:auto 500%;background-position:54% 75%}
-  .culture-directory>#tech{background-image:url('../assets/2026/tech-mobile.webp');background-position:center 24%}
+  .culture-directory>#movies{--culture-image:url('../assets/2026/movies-hero-mobile-v1.png');--culture-position:center 22%;--culture-size:cover}
+  .culture-directory>#games{--culture-image:url('../assets/2026/games-hero-mobile-v1.png');--culture-position:center 22%;--culture-size:cover}
+  .culture-directory>#comics{--culture-size:100% 500%;--culture-position:center 50%}
+  .culture-directory>#geek{--culture-size:100% 500%;--culture-position:center 75%}
+  .culture-directory>#tech{--culture-image:url('../assets/2026/tech-mobile.webp');--culture-position:center 24%;--culture-size:cover}
   .culture-number{font-size:50px}
   .culture-directory h2{font-size:clamp(36px,11vw,52px)}
   .culture-directory p:not(.eyebrow){max-width:100%;font-size:16px}
