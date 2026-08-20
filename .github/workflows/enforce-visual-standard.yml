@@ -10,6 +10,7 @@ on:
       - '.github/scripts/fix_legacy_article_art.py'
       - '.github/scripts/hydrate_listing_art.py'
       - '.github/scripts/hydrate_story_lists.py'
+      - '.github/scripts/visual_audit.py'
       - 'site-2026.css'
       - 'script.js'
       - 'assets/2026/editorial-fallback.svg'
@@ -34,6 +35,8 @@ jobs:
         run: python .github/scripts/hydrate_listing_art.py
       - name: Hydrate static category story lists
         run: python .github/scripts/hydrate_story_lists.py
+      - name: Audit visual coverage
+        run: python .github/scripts/visual_audit.py
       - name: Commit visual-standard sweep
         run: |
           if git diff --quiet; then
