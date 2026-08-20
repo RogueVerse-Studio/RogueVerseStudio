@@ -8,6 +8,7 @@ on:
       - '.github/workflows/enforce-visual-standard.yml'
       - '.github/scripts/enforce_visuals.py'
       - '.github/scripts/fix_legacy_article_art.py'
+      - '.github/scripts/promote_existing_article_art.py'
       - '.github/scripts/hydrate_listing_art.py'
       - '.github/scripts/hydrate_story_lists.py'
       - '.github/scripts/hydrate_mobile_card_art.py'
@@ -32,6 +33,8 @@ jobs:
         run: python .github/scripts/enforce_visuals.py
       - name: Upgrade legacy articles with responsive visuals
         run: python .github/scripts/fix_legacy_article_art.py
+      - name: Promote existing finished article illustrations
+        run: python .github/scripts/promote_existing_article_art.py
       - name: Hydrate article listing cards
         run: python .github/scripts/hydrate_listing_art.py
       - name: Hydrate static category story lists
