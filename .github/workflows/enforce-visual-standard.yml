@@ -1,0 +1,99 @@
+name: Enforce RogueVerse Visual Standard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/enforce-visual-standard.yml'
+      - 'site-2026.css'
+      - 'assets/2026/editorial-fallback.svg'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  visual-standard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add visual system and missing article header art
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          root = Path('.')
+
+          def rel_prefix(path: Path) -> str:
+              depth = len(path.parent.parts)
+              return '../' * depth
+
+          def art_for(path: Path, prefix: str):
+              s = path.as_posix()
+              if s.startswith('old-man-otaku/'):
+                  return (prefix+'assets/optimized/animanga-updates-1440.webp', prefix+'assets/optimized/animanga-updates-768.webp', 'AniManga Updates editorial artwork with Old Man Otaku')
+              if s.startswith('news/movies/'):
+                  return (prefix+'assets/2026/movies-hero-desktop-v1.png', prefix+'assets/2026/movies-hero-mobile-v1.png', 'Original RogueVerse Movies editorial artwork')
+              if s.startswith('news/games/'):
+                  return (prefix+'assets/2026/games-hero-desktop-v1.png', prefix+'assets/2026/games-hero-mobile-v1.png', 'Original RogueVerse Games editorial artwork')
+              if s.startswith('news/tech/') or s.startswith('future/'):
+                  return (prefix+'assets/2026/future-hero-desktop-v1.png', prefix+'assets/2026/future-hero-mobile-v1.png', 'Original RogueVerse Future editorial artwork')
+              if s.startswith('our-culture/'):
+                  return (prefix+'assets/2026/our-culture-hero-desktop-v1.png', prefix+'assets/2026/our-culture-hero-mobile-v1.png', 'Original RogueVerse Our Culture editorial artwork')
+              if s.startswith('community/'):
+                  return (prefix+'assets/2026/community-hero-desktop-v1.png', prefix+'assets/2026/community-hero-mobile-v1.png', 'Original RogueVerse Community editorial artwork')
+              if s.startswith('mythra/'):
+                  return (prefix+'assets/optimized/mythra-hero-1440.webp', prefix+'assets/optimized/mythra-hero-768.webp', 'RogueVerse Mythra original-world artwork')
+              return (prefix+'assets/2026/editorial-fallback.svg', None, 'Original RogueVerse Studio editorial artwork')
+
+          changed = []
+          for path in root.rglob('*.html'):
+              if '.git' in path.parts:
+                  continue
+              text = path.read_text(encoding='utf-8')
+              original = text
+              prefix = rel_prefix(path)
+
+              # Every page gets the shared responsive visual standard stylesheet.
+              if 'site-2026.css' not in text and '</head>' in text:
+                  text = text.replace('</head>', f'<link rel="stylesheet" href="{prefix}site-2026.css?v=20260820-visual">\n</head>', 1)
+
+              # Every article gets a visible header image when it does not already have one.
+              if 'article-page' in text and 'article-lead-art' not in text:
+                  desktop, mobile, alt = art_for(path, prefix)
+                  if mobile:
+                      figure = f'\n  <figure class="article-lead-art rv-auto-article-art"><picture><source media="(max-width:680px)" srcset="{mobile}"><img src="{desktop}" alt="{alt}" loading="eager" decoding="async"></picture></figure>\n'
+                  else:
+                      figure = f'\n  <figure class="article-lead-art rv-auto-article-art"><img src="{desktop}" alt="{alt}" loading="eager" decoding="async"></figure>\n'
+
+                  dek = re.search(r'(<p\s+class=["\']dek["\'][^>]*>.*?</p>)', text, flags=re.I|re.S)
+                  if dek:
+                      text = text[:dek.end()] + figure + text[dek.end():]
+                  else:
+                      h1 = re.search(r'(<h1[^>]*>.*?</h1>)', text, flags=re.I|re.S)
+                      if h1:
+                          text = text[:h1.end()] + figure + text[h1.end():]
+
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(path.as_posix())
+
+          print(f'Updated {len(changed)} HTML files')
+          for p in changed:
+              print(p)
+
+      - name: Commit visual-standard sweep
+        run: |
+          if git diff --quiet; then
+            echo "No visual-standard changes needed."
+            exit 0
+          fi
+          git config user.name "RogueVerse Visual Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add .
+          git commit -m "Apply visual publishing standard site-wide"
+          git push
