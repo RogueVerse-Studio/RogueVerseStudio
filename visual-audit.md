@@ -7,7 +7,7 @@
 - Missing local image files: **0**
 - Major landing pages without visual hero: **0**
 - Pages still referencing under-construction imagery/text: **0**
-- Pages still using temporary/generated visual assets: **50**
+- Pages still using temporary/generated visual assets: **44**
 - Broken internal links: **0**
 
 ## Articles missing lead art
@@ -28,12 +28,7 @@
 ## Temporary/generated art still needing finished-art review
 - `index.html`
 - `news/fayetteville-skyeton/index.html`
-- `news/games/atari-returns-to-profit-retro-gaming-strategy/index.html`
-- `news/games/beast-of-reincarnation-game-freak-launch-preview/index.html`
-- `news/games/for-honor-year-10-refuses-to-die/index.html`
 - `news/games/index.html`
-- `news/games/samara-weaving-gamer-open-world-agent-of-chaos/index.html`
-- `news/games/xbox-360-games-coming-to-pc-project-helix/index.html`
 - `news/movies/avatar-aang/index.html`
 - `news/movies/avengers-doomsday-leading-us-through-doomsday/index.html`
 - `news/movies/damage-control-anti-mutant-agency-theory/index.html`
@@ -69,7 +64,6 @@
 - `old-man-otaku/solo-leveling-ragnarok-august-12-return/index.html`
 - `old-man-otaku/tomb-raider-king-solo-leveling-comparison-2026/index.html`
 - `old-man-otaku/where-is-boruto-anime/index.html`
-- `our-culture/comics/star-wars-marvel-hope-assembles/index.html`
 - `our-culture/index.html`
 - `our-culture/inside-fandom/before-fandom-became-an-industry/index.html`
 - `our-culture/inside-fandom/conventions-are-real-world-internet/index.html`
