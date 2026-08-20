@@ -7,6 +7,7 @@ on:
       - '**/*.html'
       - '.github/workflows/enforce-visual-standard.yml'
       - '.github/scripts/enforce_visuals.py'
+      - '.github/scripts/fix_legacy_article_art.py'
       - '.github/scripts/hydrate_listing_art.py'
       - 'site-2026.css'
       - 'script.js'
@@ -26,6 +27,8 @@ jobs:
           fetch-depth: 0
       - name: Enforce responsive image coverage
         run: python .github/scripts/enforce_visuals.py
+      - name: Upgrade legacy articles with responsive visuals
+        run: python .github/scripts/fix_legacy_article_art.py
       - name: Hydrate article listing cards
         run: python .github/scripts/hydrate_listing_art.py
       - name: Commit visual-standard sweep
