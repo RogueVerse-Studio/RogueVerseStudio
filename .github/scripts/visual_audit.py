@@ -11,9 +11,11 @@ missing_listing_art = []
 missing_image_files = []
 major_pages_without_visual_hero = []
 placeholder_refs = []
+temporary_generated_art = []
 broken_internal_links = []
 
 visual_hero_markers = ('section-art-hero', 'art-hero', 'rv-hero', 'omo-hero', 'culture-hero', 'wellness-card', 'visual-hero', 'legal-art-hero')
+temporary_art_markers = ('rv-article-visual.svg', 'rv-article-visual-mobile.svg', '/card-art/', 'card-art/', 'editorial-fallback.svg')
 
 
 def exists_from(page, value):
@@ -36,6 +38,9 @@ for page in html_files:
 
     if 'under-construction' in text.lower():
         placeholder_refs.append(rel)
+
+    if any(marker in text for marker in temporary_art_markers):
+        temporary_generated_art.append(rel)
 
     if page.name == 'index.html' and len(page.parent.parts) <= 2 and 'article-shell' not in text:
         if not any(marker in text for marker in visual_hero_markers):
@@ -87,6 +92,7 @@ report = [
     f'- Missing local image files: **{len(missing_image_files)}**',
     f'- Major landing pages without visual hero: **{len(major_pages_without_visual_hero)}**',
     f'- Pages still referencing under-construction imagery/text: **{len(placeholder_refs)}**',
+    f'- Pages still using temporary/generated visual assets: **{len(set(temporary_generated_art))}**',
     f'- Broken internal links: **{len(broken_internal_links)}**',
     '',
 ]
@@ -97,6 +103,7 @@ sections = [
     ('Missing local image files', missing_image_files),
     ('Major pages without visual hero', major_pages_without_visual_hero),
     ('Under-construction references', placeholder_refs),
+    ('Temporary/generated art still needing finished-art review', temporary_generated_art),
     ('Broken internal links', broken_internal_links),
 ]
 for title, items in sections:
@@ -108,4 +115,4 @@ for title, items in sections:
     report.append('')
 
 Path('visual-audit.md').write_text('\n'.join(report), encoding='utf-8')
-print('\n'.join(report[:12]))
+print('\n'.join(report[:13]))
