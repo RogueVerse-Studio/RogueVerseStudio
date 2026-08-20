@@ -20,37 +20,72 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Add visual system and missing article header art
+      - name: Enforce image coverage and generate unique article art
         shell: python
         run: |
           from pathlib import Path
-          import re
+          import re, html, hashlib, textwrap
 
           root = Path('.')
+          generic_markers = (
+              'animanga-updates-1440.webp','movies-hero-desktop-v1.png','games-hero-desktop-v1.png',
+              'future-hero-desktop-v1.png','our-culture-hero-desktop-v1.png','community-hero-desktop-v1.png',
+              'editorial-fallback.svg'
+          )
 
           def rel_prefix(path: Path) -> str:
-              depth = len(path.parent.parts)
-              return '../' * depth
+              return '../' * len(path.parent.parts)
 
-          def art_for(path: Path, prefix: str):
+          def palette(path: Path):
               s = path.as_posix()
               if s.startswith('old-man-otaku/'):
-                  return (prefix+'assets/optimized/animanga-updates-1440.webp', prefix+'assets/optimized/animanga-updates-768.webp', 'AniManga Updates editorial artwork with Old Man Otaku')
+                  return ('#05070b','#ff6a00','#1687ff','ANIMANGA UPDATES')
               if s.startswith('news/movies/'):
-                  return (prefix+'assets/2026/movies-hero-desktop-v1.png', prefix+'assets/2026/movies-hero-mobile-v1.png', 'Original RogueVerse Movies editorial artwork')
+                  return ('#05070b','#ff6a00','#b43aff','ROGUEVERSE MOVIES')
               if s.startswith('news/games/'):
-                  return (prefix+'assets/2026/games-hero-desktop-v1.png', prefix+'assets/2026/games-hero-mobile-v1.png', 'Original RogueVerse Games editorial artwork')
+                  return ('#04070c','#ff6a00','#13a9ff','ROGUEVERSE GAMING')
               if s.startswith('news/tech/') or s.startswith('future/'):
-                  return (prefix+'assets/2026/future-hero-desktop-v1.png', prefix+'assets/2026/future-hero-mobile-v1.png', 'Original RogueVerse Future editorial artwork')
+                  return ('#04050c','#a56cff','#53b8ff','ROGUEVERSE FUTURE')
               if s.startswith('our-culture/'):
-                  return (prefix+'assets/2026/our-culture-hero-desktop-v1.png', prefix+'assets/2026/our-culture-hero-mobile-v1.png', 'Original RogueVerse Our Culture editorial artwork')
+                  return ('#05070b','#ff6a00','#16b6c8','OUR CULTURE')
               if s.startswith('community/'):
-                  return (prefix+'assets/2026/community-hero-desktop-v1.png', prefix+'assets/2026/community-hero-mobile-v1.png', 'Original RogueVerse Community editorial artwork')
+                  return ('#07100f','#ff8a3d','#55c7b8','ROGUEVERSE COMMUNITY')
               if s.startswith('mythra/'):
-                  return (prefix+'assets/optimized/mythra-hero-1440.webp', prefix+'assets/optimized/mythra-hero-768.webp', 'RogueVerse Mythra original-world artwork')
-              return (prefix+'assets/2026/editorial-fallback.svg', None, 'Original RogueVerse Studio editorial artwork')
+                  return ('#070707','#d5a94c','#ff6a00','ROGUEVERSE MYTHRA')
+              return ('#05070b','#ff6a00','#1687ff','ROGUEVERSE STUDIO')
+
+          def strip_tags(s):
+              return re.sub(r'<[^>]+>', '', s).replace('&amp;','&').replace('&quot;','"').replace('&#39;',"'").strip()
+
+          def make_svg(path: Path, title: str, kicker: str):
+              bg, a, b, label = palette(path)
+              seed = int(hashlib.sha1(path.as_posix().encode()).hexdigest()[:8],16)
+              circles = []
+              for i in range(12):
+                  x = 720 + ((seed >> (i % 16)) * (37+i*13)) % 760
+                  y = 110 + ((seed >> ((i+5) % 16)) * (31+i*9)) % 620
+                  r = 18 + ((seed >> ((i+9)%16)) % 62)
+                  circles.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{a if i%2==0 else b}" opacity="{0.08 + (i%4)*0.035:.3f}"/>')
+              wrapped = textwrap.wrap(title, width=28)[:4]
+              tspans = ''.join(f'<tspan x="92" dy="{0 if i==0 else 78}">{html.escape(line)}</tspan>' for i,line in enumerate(wrapped))
+              kicker_clean = html.escape((strip_tags(kicker) or 'ROGUEVERSE EDITORIAL')[:72])
+              # Original RogueVerse silhouettes only. No protected franchise likenesses.
+              return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">{html.escape(title)}</title><desc id="d">Original RogueVerse editorial artwork for {html.escape(title)}.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="{bg}"/><stop offset=".55" stop-color="#0b1020"/><stop offset="1" stop-color="{bg}"/></linearGradient><radialGradient id="ra"><stop stop-color="{a}"/><stop offset="1" stop-color="{a}" stop-opacity="0"/></radialGradient><radialGradient id="rb"><stop stop-color="{b}"/><stop offset="1" stop-color="{b}" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="900" fill="url(#bg)"/><circle cx="1180" cy="380" r="420" fill="url(#ra)" opacity=".28"/><circle cx="930" cy="610" r="360" fill="url(#rb)" opacity=".18"/>{''.join(circles)}
+<g opacity=".14" stroke="#fff" stroke-width="2"><path d="M0 150h1600M0 300h1600M0 450h1600M0 600h1600M0 750h1600"/><path d="M250 0v900M500 0v900M750 0v900M1000 0v900M1250 0v900M1500 0v900"/></g>
+<g fill="#030509"><path d="M1110 820c18-155 44-282 108-378l-22-156 50 126h70l50-126-22 156c64 96 90 223 108 378z"/><circle cx="1281" cy="270" r="72"/><path d="M930 820c15-135 42-245 92-330l-15-118 38 94h58l38-94-15 118c50 85 77 195 92 330z"/><circle cx="1068" cy="365" r="60"/></g>
+<path d="M1245 286h72" stroke="{a}" stroke-width="14" stroke-linecap="round"/><path d="M1038 377h60" stroke="{b}" stroke-width="12" stroke-linecap="round"/>
+<path d="M820 110l18 210 58 23-64 28-12 265-12-265-64-28 58-23z" fill="#dce7f5" opacity=".88"/>
+<text x="92" y="92" fill="{a}" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" letter-spacing="7">{label}</text>
+<text x="92" y="148" fill="#aeb9cb" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="3">{kicker_clean}</text>
+<text x="92" y="270" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="900">{tspans}</text>
+<rect x="92" y="742" width="300" height="8" fill="{a}"/><rect x="404" y="742" width="150" height="8" fill="{b}"/>
+</svg>'''
 
           changed = []
+          generated = []
           for path in root.rglob('*.html'):
               if '.git' in path.parts:
                   continue
@@ -58,33 +93,40 @@ jobs:
               original = text
               prefix = rel_prefix(path)
 
-              # Every page gets the shared responsive visual standard stylesheet.
               if 'site-2026.css' not in text and '</head>' in text:
                   text = text.replace('</head>', f'<link rel="stylesheet" href="{prefix}site-2026.css?v=20260820-visual">\n</head>', 1)
 
-              # Every article gets a visible header image when it does not already have one.
-              if 'article-page' in text and 'article-lead-art' not in text:
-                  desktop, mobile, alt = art_for(path, prefix)
-                  if mobile:
-                      figure = f'\n  <figure class="article-lead-art rv-auto-article-art"><picture><source media="(max-width:680px)" srcset="{mobile}"><img src="{desktop}" alt="{alt}" loading="eager" decoding="async"></picture></figure>\n'
-                  else:
-                      figure = f'\n  <figure class="article-lead-art rv-auto-article-art"><img src="{desktop}" alt="{alt}" loading="eager" decoding="async"></figure>\n'
+              if 'article-page' in text:
+                  h1m = re.search(r'<h1[^>]*>(.*?)</h1>', text, flags=re.I|re.S)
+                  title = strip_tags(h1m.group(1)) if h1m else path.parent.name.replace('-',' ').title()
+                  km = re.search(r'<p\s+class=["\']kicker["\'][^>]*>(.*?)</p>', text, flags=re.I|re.S)
+                  kicker = strip_tags(km.group(1)) if km else ''
+                  article_svg = path.parent / 'rv-article-visual.svg'
 
-                  dek = re.search(r'(<p\s+class=["\']dek["\'][^>]*>.*?</p>)', text, flags=re.I|re.S)
-                  if dek:
-                      text = text[:dek.end()] + figure + text[dek.end():]
-                  else:
-                      h1 = re.search(r'(<h1[^>]*>.*?</h1>)', text, flags=re.I|re.S)
-                      if h1:
-                          text = text[:h1.end()] + figure + text[h1.end():]
+                  lead = re.search(r'<figure\s+class=["\'][^"\']*article-lead-art[^"\']*["\'][^>]*>.*?</figure>', text, flags=re.I|re.S)
+                  needs_unique = not lead or any(marker in lead.group(0) for marker in generic_markers)
+
+                  if needs_unique:
+                      article_svg.write_text(make_svg(path,title,kicker), encoding='utf-8')
+                      generated.append(article_svg.as_posix())
+                      fig = f'<figure class="article-lead-art rv-auto-article-art"><img src="rv-article-visual.svg" alt="Original RogueVerse editorial artwork for {html.escape(title, quote=True)}" loading="eager" decoding="async"></figure>'
+                      if lead:
+                          text = text[:lead.start()] + fig + text[lead.end():]
+                      else:
+                          dek = re.search(r'(<p\s+class=["\']dek["\'][^>]*>.*?</p>)', text, flags=re.I|re.S)
+                          if dek:
+                              text = text[:dek.end()] + '\n' + fig + text[dek.end():]
+                          elif h1m:
+                              text = text[:h1m.end()] + '\n' + fig + text[h1m.end():]
 
               if text != original:
                   path.write_text(text, encoding='utf-8')
                   changed.append(path.as_posix())
 
           print(f'Updated {len(changed)} HTML files')
-          for p in changed:
-              print(p)
+          print(f'Generated {len(generated)} unique article SVGs')
+          for p in generated:
+              print('ART', p)
 
       - name: Commit visual-standard sweep
         run: |
