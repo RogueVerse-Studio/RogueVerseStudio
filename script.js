@@ -277,3 +277,20 @@ if (feed && shell) {
     console.warn("RogueVerse romance header fallback retained.", error);
   });
 })();
+
+// data-rv-story-art-hydrator: dynamically generated story links use each article's lead art.
+(() => {
+  const links = [...document.querySelectorAll('.story-list a')];
+  if (!links.length) return;
+  links.forEach(async (link) => {
+    try {
+      const response = await fetch(link.href, {cache: 'force-cache'});
+      if (!response.ok) return;
+      const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+      const img = doc.querySelector('.article-lead-art img');
+      if (!img) return;
+      const artUrl = new URL(img.getAttribute('src'), link.href).href;
+      link.style.setProperty('--rv-card-art', `url("${artUrl}")`);
+    } catch (_) {}
+  });
+})();
