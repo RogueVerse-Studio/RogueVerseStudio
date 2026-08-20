@@ -1,13 +1,13 @@
 # RogueVerse Visual Coverage Audit
 
-- HTML pages scanned: **90**
-- Article pages detected: **71**
+- HTML pages scanned: **91**
+- Article pages detected: **72**
 - Article pages missing lead art: **0**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
 - Major landing pages without visual hero: **0**
 - Pages still referencing under-construction imagery/text: **0**
-- Broken internal links: **1**
+- Broken internal links: **0**
 
 ## Articles missing lead art
 - None
@@ -25,4 +25,4 @@
 - None
 
 ## Broken internal links
-- `old-man-otaku/index.html -> haikyu-2027-little-giant-monsters-go/`
+- None
