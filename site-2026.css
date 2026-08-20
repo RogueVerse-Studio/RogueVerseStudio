@@ -42,6 +42,11 @@
 .rv-auto-article-art picture{display:block;width:100%}
 .rv-auto-article-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center}
 
+/* Homepage Mythra worlds must show their actual title art instead of construction cards. */
+.rv-home .series-card--sentou>img{object-position:-9999px;background:url('assets/mythra/sentou-title.svg') center/cover no-repeat}
+.rv-home .series-card--love>img{object-position:-9999px;background:url('assets/mythra/love-power-ai-love-cover.png') center 34%/cover no-repeat}
+.rv-home .series-card--stranded>img{object-position:-9999px;background:url('assets/mythra/stranded-title.webp') center/cover no-repeat}
+
 /* If an older article template somehow has no lead image at all, keep a visible safety net. */
 .article-page .article-shell:not(:has(.article-lead-art))::before{
   content:"";
