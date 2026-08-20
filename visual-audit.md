@@ -1,7 +1,7 @@
 # RogueVerse Visual Coverage Audit
 
-- HTML pages scanned: **89**
-- Article pages detected: **70**
+- HTML pages scanned: **90**
+- Article pages detected: **71**
 - Article pages missing lead art: **0**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
