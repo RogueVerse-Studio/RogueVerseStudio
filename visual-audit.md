@@ -1,11 +1,11 @@
 # RogueVerse Visual Coverage Audit
 
-- HTML pages scanned: **86**
-- Article pages detected: **67**
+- HTML pages scanned: **89**
+- Article pages detected: **70**
 - Article pages missing lead art: **0**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
-- Major landing pages without visual hero: **2**
+- Major landing pages without visual hero: **1**
 - Pages still referencing under-construction imagery/text: **0**
 - Broken internal links: **1**
 
@@ -20,7 +20,6 @@
 
 ## Major pages without visual hero
 - `analytics/index.html`
-- `terms-of-service/index.html`
 
 ## Under-construction references
 - None
