@@ -5,7 +5,7 @@
 - Article pages missing lead art: **0**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
-- Major landing pages without visual hero: **1**
+- Major landing pages without visual hero: **0**
 - Pages still referencing under-construction imagery/text: **0**
 - Broken internal links: **1**
 
@@ -19,7 +19,7 @@
 - None
 
 ## Major pages without visual hero
-- `analytics/index.html`
+- None
 
 ## Under-construction references
 - None
