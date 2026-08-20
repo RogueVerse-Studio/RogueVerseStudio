@@ -5,7 +5,8 @@
 .section-card,
 .story-list a,
 .post-placeholder,
-.feature-card{
+.feature-card,
+.story-stack a{
   position:relative;
   isolation:isolate;
   overflow:hidden;
@@ -13,7 +14,8 @@
 .section-card::before,
 .story-list a::before,
 .post-placeholder::before,
-.feature-card::before{
+.feature-card::before,
+.story-stack a::before{
   content:"";
   position:absolute;
   inset:0;
@@ -27,7 +29,8 @@
 .section-card::after,
 .story-list a::after,
 .post-placeholder::after,
-.feature-card::after{
+.feature-card::after,
+.story-stack a::after{
   content:"";
   position:absolute;
   inset:0;
@@ -35,7 +38,13 @@
   background:linear-gradient(0deg,rgba(4,7,12,.98) 4%,rgba(4,7,12,.72) 52%,rgba(4,7,12,.24)),linear-gradient(90deg,rgba(4,7,12,.84),transparent 72%);
   pointer-events:none;
 }
-.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before{transform:scale(1.035);opacity:.58;filter:saturate(1.08)}
+.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before,.story-stack a:hover::before{transform:scale(1.035);opacity:.58;filter:saturate(1.08)}
+
+/* Homepage story stack keeps the compact editorial layout while gaining individual art. */
+.story-stack a{background:linear-gradient(145deg,rgba(12,19,31,.94),rgba(7,11,18,.96))!important}
+.story-stack a::before{opacity:.32;background-position:center}
+.story-stack a::after{background:linear-gradient(90deg,rgba(4,7,12,.95),rgba(4,7,12,.72) 64%,rgba(4,7,12,.34))}
+.story-stack a:hover::before{opacity:.5}
 
 /* Auto-generated article art uses a dedicated mobile composition instead of a hard crop. */
 .rv-auto-article-art{width:min(100%,980px);margin:38px auto 46px;overflow:hidden;background:#05080f;border:1px solid rgba(10,16,32,.14);box-shadow:0 22px 55px rgba(0,0,0,.22)}
@@ -101,11 +110,11 @@ body:has(.wellness-grid) .story-list a{--rv-card-art:url('assets/2026/community-
 .future-page .story-list a,.future-page .category{--rv-card-art:url('assets/2026/future-hero-desktop-v1.png');--rv-section-art:url('assets/2026/future-hero-desktop-v1.png')}
 
 @media(max-width:720px){
-  .section-card::before,.story-list a::before,.feature-card::before{background-position:center top}
+  .section-card::before,.story-list a::before,.feature-card::before,.story-stack a::before{background-position:center top}
   .rv-auto-article-art{margin:26px -2px 38px;width:calc(100% + 4px)}
   .rv-auto-article-art img{aspect-ratio:3/4;object-position:center top}
   .article-page .article-shell:not(:has(.article-lead-art))::before{aspect-ratio:3/4;background-position:center top}
   .category:not(:has(img)){min-height:380px;padding:36px 24px}
 }
 
-@media(prefers-reduced-motion:reduce){.section-card::before,.story-list a::before,.feature-card::before{transition:none}.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before{transform:none}}
+@media(prefers-reduced-motion:reduce){.section-card::before,.story-list a::before,.feature-card::before,.story-stack a::before{transition:none}.section-card:hover::before,.story-list a:hover::before,.feature-card:hover::before,.story-stack a:hover::before{transform:none}}
