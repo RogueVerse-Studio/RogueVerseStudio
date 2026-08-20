@@ -3,37 +3,23 @@
 - HTML pages scanned: **91**
 - Article pages detected: **72**
 - Article pages missing lead art: **0**
+- Article pages still using temporary/generated lead art: **39**
+- Listing pages still referencing temporary/generated art: **5**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
 - Major landing pages without visual hero: **0**
 - Pages still referencing under-construction imagery/text: **0**
-- Pages still using temporary/generated visual assets: **44**
 - Broken internal links: **0**
 
 ## Articles missing lead art
 - None
 
-## Listing cards missing art
-- None
-
-## Missing local image files
-- None
-
-## Major pages without visual hero
-- None
-
-## Under-construction references
-- None
-
-## Temporary/generated art still needing finished-art review
-- `index.html`
+## Temporary/generated article leads needing finished-art review
 - `news/fayetteville-skyeton/index.html`
-- `news/games/index.html`
 - `news/movies/avatar-aang/index.html`
 - `news/movies/avengers-doomsday-leading-us-through-doomsday/index.html`
 - `news/movies/damage-control-anti-mutant-agency-theory/index.html`
 - `news/movies/did-ned-break-doctor-stranges-spell/index.html`
-- `news/movies/index.html`
 - `news/movies/jean-grey-lied-to-peter-brand-new-day-theory/index.html`
 - `news/movies/jumanji-open-world/index.html`
 - `news/movies/marvel-wonder-man-canceled-blade-armor-wars/index.html`
@@ -52,7 +38,6 @@
 - `old-man-otaku/haikyu-vs-little-giant-where-monsters-go-2027/index.html`
 - `old-man-otaku/hidive-mbs-biggest-anime-deal/index.html`
 - `old-man-otaku/horikoshi-horror-one-shot/index.html`
-- `old-man-otaku/index.html`
 - `old-man-otaku/kaze-us-manga-imprint/index.html`
 - `old-man-otaku/kenichi-2-volume-1-print-milestone/index.html`
 - `old-man-otaku/luke-cage-doctor-doom/index.html`
@@ -64,12 +49,30 @@
 - `old-man-otaku/solo-leveling-ragnarok-august-12-return/index.html`
 - `old-man-otaku/tomb-raider-king-solo-leveling-comparison-2026/index.html`
 - `old-man-otaku/where-is-boruto-anime/index.html`
-- `our-culture/index.html`
 - `our-culture/inside-fandom/before-fandom-became-an-industry/index.html`
 - `our-culture/inside-fandom/conventions-are-real-world-internet/index.html`
 - `our-culture/inside-fandom/cosplay-went-global/index.html`
 - `our-culture/inside-fandom/cosplay-workshop-tech-lab/index.html`
 - `our-culture/inside-fandom/tabletop-convention-arc/index.html`
+
+## Listing pages referencing temporary/generated art
+- `index.html`
+- `news/games/index.html`
+- `news/movies/index.html`
+- `old-man-otaku/index.html`
+- `our-culture/index.html`
+
+## Listing cards missing art
+- None
+
+## Missing local image files
+- None
+
+## Major pages without visual hero
+- None
+
+## Under-construction references
+- None
 
 ## Broken internal links
 - None
