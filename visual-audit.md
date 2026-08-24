@@ -3,7 +3,7 @@
 - HTML pages scanned: **97**
 - Article pages detected: **78**
 - Article pages missing lead art: **0**
-- Article pages still using temporary/generated lead art: **40**
+- Article pages still using temporary/generated lead art: **39**
 - Listing pages still referencing temporary/generated art: **5**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
@@ -43,7 +43,6 @@
 - `old-man-otaku/luke-cage-doctor-doom/index.html`
 - `old-man-otaku/mjolnir-worthiness/index.html`
 - `old-man-otaku/mononoke-movie-chapter-3-netflix-september-29/index.html`
-- `old-man-otaku/one-piece-live-action-season-3-alabasta-cast/index.html`
 - `old-man-otaku/overgeared-october-2-premiere/index.html`
 - `old-man-otaku/reincarnated-as-a-sword-season-2-sky-island/index.html`
 - `old-man-otaku/shueisha-27-million-canceled-anime-orders/index.html`
