@@ -1,9 +1,9 @@
 # RogueVerse Visual Coverage Audit
 
-- HTML pages scanned: **99**
-- Article pages detected: **80**
+- HTML pages scanned: **101**
+- Article pages detected: **82**
 - Article pages missing lead art: **0**
-- Article pages still using temporary/generated lead art: **39**
+- Article pages still using temporary/generated lead art: **41**
 - Listing pages still referencing temporary/generated art: **5**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **0**
@@ -23,6 +23,7 @@
 - `news/movies/jean-grey-lied-to-peter-brand-new-day-theory/index.html`
 - `news/movies/jumanji-open-world/index.html`
 - `news/movies/marvel-wonder-man-canceled-blade-armor-wars/index.html`
+- `news/movies/peter-parker-jean-grey-romance-rumor/index.html`
 - `news/movies/ryan-gosling-ghost-rider/index.html`
 - `news/movies/spider-man-memory-spell-loophole-theory/index.html`
 - `news/movies/transformers-update/index.html`
@@ -31,6 +32,7 @@
 - `old-man-otaku/10-most-liked-new-manga-2026/index.html`
 - `old-man-otaku/anime-next-wave-august-2026/index.html`
 - `old-man-otaku/best-fighting-anime-streaming-hidden-gems/index.html`
+- `old-man-otaku/blue-box-season-2-october-2026/index.html`
 - `old-man-otaku/boruto-senju-clan-disappearance/index.html`
 - `old-man-otaku/god-of-manga-osamu-tezuka/index.html`
 - `old-man-otaku/gundam-xarx-zero/index.html`
