@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "slug": "adachitoka-yadoya-no-oinu-sama",
+  "section": "old-man-otaku",
+  "title": "Noragami Creators Return With New Manga Yadoya no Oinu-sama",
+  "description": "Adachitoka, the creator duo behind Noragami, returns to Monthly Shonen Magazine with a new manga beginning October 6, 2026.",
+  "kicker": "MANGA NEWS • SEPTEMBER 4, 2026",
+  "dek": "Adachitoka's first new serialization after Noragami begins this October with a mysterious otherworldly story.",
+  "publish_at": "2026-09-04T12:30:00-04:00",
+  "hero": {
+    "src": "assets/optimized/animanga-updates-1440.webp",
+    "alt": "AniManga Updates with Old Man Otaku"
+  },
+  "article": {
+    "kind": "reported",
+    "blocks": [
+      {"type":"paragraph","html":"After more than two years away from regular serialization, Adachitoka, the manga-creator duo behind <em>Noragami</em>, is returning with a brand-new series."},
+      {"type":"paragraph","html":"<em>Yadoya no Oinu-sama</em> will launch in the November 2026 issue of Kodansha's <em>Monthly Shonen Magazine</em>, which goes on sale in Japan on October 6, 2026. The announcement marks Adachitoka's first new serialization following the conclusion of <em>Noragami</em> in January 2024."},
+      {"type":"heading","html":"A New World After Noragami"},
+      {"type":"paragraph","html":"The newly announced story follows a middle-school student whose school trip takes a strange turn after a fall down a mountainside. The early promotional material teases her return to an extraordinary world and an encounter with a mysterious girl, leaving the larger nature of that world deliberately unexplained."},
+      {"type":"paragraph","html":"That wording gives the premise an immediate mystery: rather than presenting the setting simply as a first journey into another world, the announcement suggests the protagonist may already have some connection to it."},
+      {"type":"heading","html":"Adachitoka's First Major Project Since Noragami"},
+      {"type":"paragraph","html":"For longtime manga readers, the creators are the biggest part of the announcement. <em>Noragami</em> ran for more than a decade and ultimately reached 27 collected volumes. Its popularity also led to two television anime seasons produced by BONES."},
+      {"type":"paragraph","html":"That history makes <em>Yadoya no Oinu-sama</em> more than another monthly serialization launch. It is the first opportunity to see what Adachitoka builds after closing the book on the supernatural series that defined much of the duo's career."},
+      {"type":"heading","html":"The First Promotional Image"},
+      {"type":"paragraph","html":"Adachitoka shared preview artwork for the new manga alongside the announcement, providing an early look at several characters and settings. RogueVerse recommends the official promotional visual for editorial coverage with the appropriate Adachitoka/Kodansha credit rather than recreated fan artwork."},
+      {"type":"heading","html":"When Does Yadoya no Oinu-sama Begin?"},
+      {"type":"paragraph","html":"The first chapter is scheduled for October 6, 2026, when the November issue of <em>Monthly Shonen Magazine</em> goes on sale in Japan. No English-language release has been confirmed in the reporting available at publication time."},
+      {"type":"heading","html":"Why This One Matters"},
+      {"type":"paragraph","html":"Creator follow-ups carry a different kind of weight. Adachitoka spent years building one of the recognizable supernatural manga franchises of the 2010s, and the initial premise of <em>Yadoya no Oinu-sama</em> suggests the duo is not simply rebuilding Yato's world under another name. A young protagonist, a mysterious return to an extraordinary world and an unexplained encounter give the new series room to establish its own identity."},
+      {"type":"blockquote","html":"RogueVerse take: after a run as long as Noragami, seeing what Adachitoka chooses to build next is reason enough to put this October launch on the watchlist."}
+    ],
+    "sources": [
+      {"label":"Anime Corner — Noragami Creators Launch New Manga Series in October","url":"https://animecorner.me/noragami-creators-launch-new-manga-series-in-october/"},
+      {"label":"Kodansha USA — Noragami: Stray God","url":"https://kodansha.us/series/noragami-stray-god/"}
+    ]
+  },
+  "video": {
+    "duration_seconds": 45,
+    "scenes": [
+      {"headline":"NORAGAMI CREATORS ARE BACK","body":"Adachitoka is returning with its first new serialization after Noragami.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"NEW MANGA • OCTOBER 6","body":"Yadoya no Oinu-sama launches in Kodansha's Monthly Shonen Magazine.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"A NEW MYSTERIOUS WORLD","body":"The early premise follows a student whose school trip leads into an extraordinary world and a mysterious encounter.","image":"assets/optimized/animanga-updates-1440.webp"},
+      {"headline":"WHAT COMES AFTER NORAGAMI?","body":"Read the full breakdown on RogueVerseMedia.com.","image":"assets/optimized/animanga-updates-1440.webp"}
+    ]
+  },
+  "social": {
+    "youtube": {
+      "title":"Noragami Creators Are Back With a New Manga #Shorts",
+      "description":"Adachitoka returns with Yadoya no Oinu-sama, launching October 6. Read the complete story at RogueVerseMedia.com. #Noragami #manga #anime #shorts",
+      "tags":["RogueVerse","Noragami","Adachitoka","manga","anime"],
+      "category_id":"24",
+      "privacy_status":"private",
+      "made_for_kids":false,
+      "contains_synthetic_media":true
+    },
+    "tiktok":{"caption":"The creators of Noragami are back. Adachitoka's new manga Yadoya no Oinu-sama begins October 6. Full breakdown at RogueVerseMedia.com. #Noragami #manga #anime #rogueverse"}
+  }
+}
