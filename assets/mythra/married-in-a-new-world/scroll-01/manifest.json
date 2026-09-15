@@ -1,0 +1,25 @@
+{
+  "title": "Married in a New World",
+  "release": "Scroll 1 Preview",
+  "liveReader": [
+    "married-in-a-new-world-scroll-01-preview-01-home-and-family.jpg",
+    "married-in-a-new-world-scroll-01-preview-02-retirement-and-packing.jpg",
+    "married-in-a-new-world-scroll-01-preview-03-bakery-and-flowers.jpg",
+    "married-in-a-new-world-scroll-01-preview-04-crossroads-establishing.jpg",
+    "married-in-a-new-world-scroll-01-preview-05-crossroads-approach.jpg",
+    "married-in-a-new-world-scroll-01-preview-07-reunion-bow.jpg",
+    "married-in-a-new-world-scroll-01-preview-08-anna-sees-the-truck.jpg",
+    "married-in-a-new-world-scroll-01-preview-09-jerald-realizes.jpg",
+    "married-in-a-new-world-scroll-01-preview-10-im-sorry-my-love.jpg",
+    "married-in-a-new-world-scroll-01-preview-11-not-without-me.jpg",
+    "married-in-a-new-world-scroll-01-preview-12-heart-transition.jpg"
+  ],
+  "qaHold": [
+    {
+      "file": "married-in-a-new-world-scroll-01-preview-06-crossroads-approach-alt.jpg",
+      "reason": "Byte-for-byte duplicate of preview 05; retained in the package but excluded from the live reader."
+    }
+  ],
+  "afterStoryFooter": "married-in-a-new-world-scroll-01-footer-coming-soon.jpg",
+  "metadataCard": "married-in-a-new-world-yma-rating-card.png"
+}
