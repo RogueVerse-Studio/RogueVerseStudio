@@ -6,7 +6,7 @@
 - Article pages still using temporary/generated lead art: **41**
 - Listing pages still referencing temporary/generated art: **5**
 - Listing cards missing visual assignment: **0**
-- Missing local image files: **0**
+- Missing local image files: **3**
 - Major landing pages without visual hero: **0**
 - Pages still referencing under-construction imagery/text: **0**
 - Broken internal links: **0**
@@ -68,7 +68,9 @@
 - None
 
 ## Missing local image files
-- None
+- `mythra/reader.html -> ${assetRoot+data.footer}`
+- `mythra/reader.html -> ${assetRoot+data.rating}`
+- `mythra/reader.html -> ${assetRoot+file}`
 
 ## Major pages without visual hero
 - None
