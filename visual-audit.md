@@ -1,7 +1,7 @@
 # RogueVerse Visual Coverage Audit
 
-- HTML pages scanned: **101**
-- Article pages detected: **82**
+- HTML pages scanned: **102**
+- Article pages detected: **83**
 - Article pages missing lead art: **0**
 - Article pages still using temporary/generated lead art: **41**
 - Listing pages still referencing temporary/generated art: **5**
