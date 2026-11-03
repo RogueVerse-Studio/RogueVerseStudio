@@ -1,10 +1,10 @@
 # RogueVerse Visual Coverage Audit
 
-- HTML pages scanned: **109**
-- Article pages detected: **90**
+- HTML pages scanned: **110**
+- Article pages detected: **91**
 - Article pages missing lead art: **0**
-- Article pages still using temporary/generated lead art: **41**
-- Listing pages still referencing temporary/generated art: **5**
+- Article pages still using temporary/generated lead art: **42**
+- Listing pages still referencing temporary/generated art: **6**
 - Listing cards missing visual assignment: **0**
 - Missing local image files: **3**
 - Major landing pages without visual hero: **0**
@@ -49,6 +49,7 @@
 - `old-man-otaku/reincarnated-as-a-sword-season-2-sky-island/index.html`
 - `old-man-otaku/shueisha-27-million-canceled-anime-orders/index.html`
 - `old-man-otaku/solo-leveling-ragnarok-august-12-return/index.html`
+- `old-man-otaku/solo-leveling-ragnarok-season-3-returns-november-5/index.html`
 - `old-man-otaku/tomb-raider-king-solo-leveling-comparison-2026/index.html`
 - `old-man-otaku/where-is-boruto-anime/index.html`
 - `our-culture/inside-fandom/before-fandom-became-an-industry/index.html`
@@ -60,6 +61,7 @@
 ## Listing pages referencing temporary/generated art
 - `index.html`
 - `news/games/index.html`
+- `news/index.html`
 - `news/movies/index.html`
 - `old-man-otaku/index.html`
 - `our-culture/index.html`
