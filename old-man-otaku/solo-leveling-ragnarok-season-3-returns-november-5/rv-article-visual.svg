@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Solo Leveling Ragnarok returns with three new Korean webtoon chapters on November 5</title>
+<desc id="d">Original RogueVerse editorial news artwork: three luminous chapter gates inside an abstract blue portal. Not official Solo Leveling promotional imagery.</desc>
+<defs>
+<linearGradient id="base" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#030713"/><stop offset=".58" stop-color="#0a1531"/><stop offset="1" stop-color="#0b0e1b"/></linearGradient>
+<linearGradient id="glow" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#00eaff"/><stop offset=".52" stop-color="#306dff"/><stop offset="1" stop-color="#913fff"/></linearGradient>
+<linearGradient id="accent" x1="0" x2="1"><stop stop-color="#ff6800"/><stop offset="1" stop-color="#ffa84b"/></linearGradient>
+<radialGradient id="a"><stop stop-color="#1b74e8" stop-opacity=".7"/><stop offset="1" stop-color="#07295e" stop-opacity="0"/></radialGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="44"/></filter>
+<filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+<pattern id="grid" width="88" height="88" patternUnits="userSpaceOnUse"><path d="M88 0H0V88" fill="none" stroke="#6f9cff" opacity=".11" stroke-width="2"/></pattern>
+</defs>
+<rect width="1600" height="900" fill="url(#base)"/><rect width="1600" height="900" fill="url(#grid)"/>
+<ellipse cx="1200" cy="452" rx="480" ry="460" fill="url(#a)" filter="url(#blur)"/>
+<path d="M-80 822L1640 190 M-80 872L1640 240 M-80 922L1640 290" stroke="#37beff" stroke-width="2" opacity=".13"/>
+<g transform="translate(1160 450)"><circle r="330" fill="none" stroke="#0087ff" stroke-width="10" opacity=".3"/><circle r="260" fill="none" stroke="url(#glow)" stroke-width="17" opacity=".65"/><circle r="209" fill="none" stroke="#00eaff" stroke-width="3" stroke-dasharray="18 29" opacity=".9"/><path d="M-245 0L-130-130L0-255L130-130L245 0L130 130L0 255L-130 130Z" fill="#07142d" fill-opacity=".9" stroke="#3b86ff" stroke-width="5"/></g>
+<g transform="translate(1160 450)">
+<path d="M-166 180V-118L-105-168L-44-118V180Z" fill="#13265a" stroke="#22dcff" stroke-width="7"/>
+<path d="M-33 184V-168L32-218L97-168V184Z" fill="#0d2c61" stroke="#3c79ff" stroke-width="8"/>
+<path d="M108 180V-118L168-168L228-118V180Z" fill="#29194d" stroke="#ad6dff" stroke-width="7"/>
+<path d="M-140-97V130 M0-145V130 M134-97V130" stroke="#e4faff" stroke-opacity=".8" stroke-width="10" filter="url(#soft)"/>
+<text x="-105" y="56" fill="#c9faff" font-family="Arial,sans-serif" font-weight="800" font-size="46" text-anchor="middle">69</text><text x="32" y="44" fill="#f7fdff" font-family="Arial,sans-serif" font-weight="800" font-size="46" text-anchor="middle">70</text><text x="169" y="56" fill="#dfcaff" font-family="Arial,sans-serif" font-weight="800" font-size="46" text-anchor="middle">71</text></g>
+<rect x="74" y="73" rx="10" width="260" height="44" fill="#ff720c"/><text x="94" y="103" fill="#050b19" font-size="23" font-weight="900" font-family="Arial,sans-serif" letter-spacing="3">ROGUEVERSE NEWS</text>
+<text x="75" y="196" fill="#35c9ff" font-size="27" font-weight="700" font-family="Arial,sans-serif" letter-spacing="5">ANIMANGA UPDATES</text>
+<text x="70" y="325" fill="#fff" font-size="76" font-weight="900" font-family="Arial,sans-serif">SOLO LEVELING</text>
+<text x="71" y="416" fill="#ff873c" font-size="79" font-weight="900" font-family="Arial,sans-serif">RAGNAROK</text>
+<text x="73" y="516" fill="#fff" font-size="48" font-weight="800" font-family="Arial,sans-serif">3 NEW CHAPTERS</text>
+<text x="73" y="583" fill="#eaf7ff" font-size="40" font-weight="700" font-family="Arial,sans-serif">NOVEMBER 5, 2026</text>
+<path d="M73 631H750" stroke="#35c9ff" stroke-width="3" opacity=".6"/>
+<text x="74" y="686" fill="#9eb6d9" font-size="28" font-weight="700" font-family="Arial,sans-serif">WEBTOON SEASON 3  •  NOT TV ANIME</text>
+<rect x="0" y="854" width="1600" height="46" fill="#081026"/><text x="75" y="885" fill="#91aacd" font-size="17" font-family="Arial,sans-serif">ORIGINAL ROGUEVERSE EDITORIAL GRAPHIC  •  FRANCHISE RIGHTS REMAIN WITH THEIR OWNERS</text>
+</svg>
